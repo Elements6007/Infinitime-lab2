@@ -1,3 +1,4 @@
+
 #include "WatchFaceTerminal.h"
 
 #include <date/date.h>
@@ -58,6 +59,10 @@ WatchFaceTerminal::WatchFaceTerminal(DisplayApp* app,
   lv_label_set_recolor(connectState, true);
   lv_label_set_text(connectState, "[STAT]#387b54 Disconnected#");
   lv_obj_align(connectState, lv_scr_act(), LV_ALIGN_IN_LEFT_MID, 0, 40);
+
+  // bleIcon = lv_label_create(lv_scr_act(), nullptr);
+  // lv_label_set_text(bleIcon, Symbols::bluetooth);
+  // lv_obj_align(bleIcon, batteryPlug, LV_ALIGN_OUT_LEFT_MID, -5, 0);
 
   notificationIcon = lv_label_create(lv_scr_act(), NULL);
   lv_label_set_text(notificationIcon, NotificationIcon::GetIcon(false));
