@@ -115,11 +115,10 @@ WatchFaceTerminal::~WatchFaceTerminal() {
   if (batteryPercentRemaining.IsUpdated()) {
     batteryPercent = batteryPercentRemaining.Get();
     lv_label_set_text(batteryIcon, BatteryIcon::GetBatteryIcon(batteryPercent));
+  }
     powerPresent = batteryController.IsPowerPresent();
     if (powerPresent.IsUpdated()) {
     lv_label_set_text(batteryPlug, BatteryIcon::GetPlugIcon(powerPresent.Get()));
-  }
-
   }
 
   /*char* bleValue;*/
