@@ -43,7 +43,7 @@ Clock::Clock(DisplayApp* app,
           return PineTimeStyleScreen();
           break;
         case 3:
-          return WatchFaceTerminal();
+          return WatchFaceTerminalScreen();
           break;
       }
       return WatchFaceDigitalScreen();
@@ -89,7 +89,7 @@ std::unique_ptr<Screen> Clock::PineTimeStyleScreen() {
                                                      motionController);
 }
 
-std::unique_ptr<Screen> Clock::WatchFaceTerminal() {
+std::unique_ptr<Screen> Clock::WatchFaceTerminalScreen() {
   return std::make_unique<Screens::WatchFaceTerminal>(app,
                                                      dateTimeController,
                                                      batteryController,
