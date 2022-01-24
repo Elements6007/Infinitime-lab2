@@ -96,5 +96,6 @@ std::unique_ptr<Screen> Clock::WatchFaceTerminalScreen() {
                                                      bleController,
                                                      notificatioManager,
                                                      settingsController,
+                                                     heartRateController,
                                                      motionController);
 }
