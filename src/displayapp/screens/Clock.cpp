@@ -41,6 +41,9 @@ Clock::Clock(DisplayApp* app,
         case 2:
           return PineTimeStyleScreen();
           break;
+        case 3:
+          return WatchFaceTerminal();
+          break;
       }
       return WatchFaceDigitalScreen();
     }()} {
