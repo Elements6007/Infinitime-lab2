@@ -88,3 +88,13 @@ std::unique_ptr<Screen> Clock::PineTimeStyleScreen() {
                                                      settingsController,
                                                      motionController);
 }
+
+std::unique_ptr<Screen> Clock::WatchFaceTerminal() {
+  return std::make_unique<Screens::WatchFaceTerminal>(app,
+                                                     dateTimeController,
+                                                     batteryController,
+                                                     bleController,
+                                                     notificatioManager,
+                                                     settingsController,
+                                                     motionController);
+}
