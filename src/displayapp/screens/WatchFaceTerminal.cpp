@@ -113,13 +113,12 @@ WatchFaceTerminal::~WatchFaceTerminal() {
   void WatchFaceTerminal::Refresh() {
   batteryPercentRemaining = batteryController.PercentRemaining();
   if (batteryPercentRemaining.IsUpdated()) {
-    batteryPercent = batteryPercentRemaining.Get();
+     auto batteryPercent = batteryPercentRemaining.Get();
     lv_label_set_text(batteryIcon, BatteryIcon::GetBatteryIcon(batteryPercent));
+     auto isCharging = batteryController.IsCharging();
+    lv_label_set_text(batteryPlug, BatteryIcon::GetPlugIcon(isCharging));
   }
-    powerPresent = batteryController.IsPowerPresent();
-    if (powerPresent.IsUpdated()) {
-    lv_label_set_text(batteryPlug, BatteryIcon::GetPlugIcon(powerPresent.Get()));
-  }
+
 
   /*char* bleValue;*/
   if (bleState.IsUpdated()) {
