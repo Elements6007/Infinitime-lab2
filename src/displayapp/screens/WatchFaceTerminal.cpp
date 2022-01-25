@@ -113,9 +113,9 @@ WatchFaceTerminal::~WatchFaceTerminal() {
   void WatchFaceTerminal::Refresh() {
   batteryPercentRemaining = batteryController.PercentRemaining();
   if (batteryPercentRemaining.IsUpdated()) {
-     auto batteryPercent = batteryPercentRemaining.Get();
+    batteryPercent = batteryPercentRemaining.Get();
     lv_label_set_text(batteryIcon, BatteryIcon::GetBatteryIcon(batteryPercent));
-     auto isCharging = batteryController.IsCharging();
+    isCharging = batteryController.IsCharging();
     lv_label_set_text(batteryPlug, BatteryIcon::GetPlugIcon(isCharging));
   }
 
