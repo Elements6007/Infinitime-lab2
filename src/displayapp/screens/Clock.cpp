@@ -107,5 +107,5 @@ std::unique_ptr<Screen> Clock::WatchFaceTerminalScreen() {
 
 std::unique_ptr<Screen> Clock::WatchFaceSimpleScreen() {
   return std::make_unique<Screens::WatchFaceSimple>(
-    app, dateTimeController, batteryController, bleController, notificatioManager, settingsController);
+    app, dateTimeController, settingsController);
 }
