@@ -12,6 +12,7 @@
 #include "displayapp/screens/WatchFaceAnalog.h"
 #include "displayapp/screens/PineTimeStyle.h"
 #include "displayapp/screens/WatchFaceTerminal.h"
+#include "displayapp/screens/WatchFaceSimple.h"
 
 
 using namespace Pinetime::Applications::Screens;
