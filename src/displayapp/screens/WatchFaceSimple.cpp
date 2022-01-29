@@ -3,12 +3,7 @@
 #include <date/date.h>
 #include <lvgl/lvgl.h>
 #include <cstdio>
-#include "displayapp/screens/BatteryIcon.h"
-#include "displayapp/screens/BleIcon.h"
-#include "displayapp/screens/NotificationIcon.h"
 #include "displayapp/screens/Symbols.h"
-#include "components/battery/BatteryController.h"
-#include "components/ble/NotificationManager.h"
 #include "components/settings/Settings.h"
 using namespace Pinetime::Applications::Screens;
 

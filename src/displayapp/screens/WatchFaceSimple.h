@@ -10,11 +10,6 @@
 namespace Pinetime {
   namespace Controllers {
     class Settings;
-    class Battery;
-    class Ble;
-    class NotificationManager;
-    class HeartRateController;
-    class MotionController;
   }
 
   namespace Applications {
