@@ -15,7 +15,7 @@ using namespace Pinetime::Applications::Screens;
 WatchFaceSimple::WatchFaceSimple(DisplayApp* app,
                                    Controllers::DateTime& dateTimeController,
                                    Controllers::NotificationManager& notificatioManager,
-                                   Controllers::Settings& settingsController,)
+                                   Controllers::Settings& settingsController)
   : Screen(app),
     currentDateTime {{}},
     dateTimeController {dateTimeController},
