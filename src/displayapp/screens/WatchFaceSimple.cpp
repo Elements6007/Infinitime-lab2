@@ -12,7 +12,7 @@
 #include "components/settings/Settings.h"
 using namespace Pinetime::Applications::Screens;
 
-SimpleFace::SimpleFace(DisplayApp* app,
+WatchFaceSimple::WatchFaceSimple(DisplayApp* app,
                                    Controllers::DateTime& dateTimeController,
                                    Controllers::NotificationManager& notificatioManager,
                                    Controllers::Settings& settingsController,)
@@ -47,12 +47,12 @@ SimpleFace::SimpleFace(DisplayApp* app,
   Refresh();
 }
 
-WatchFaceDigital::~WatchFaceDigital() {
+WatchFaceSimple::~WatchFaceSimple() {
   lv_task_del(taskRefresh);
   lv_obj_clean(lv_scr_act());
 }
 
-void WatchFaceDigital::Refresh() {
+void WatchFaceSimple::Refresh() {
 
   currentDateTime = dateTimeController.CurrentDateTime();
 
