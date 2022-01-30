@@ -40,7 +40,6 @@ namespace Pinetime {
         lv_obj_t* backgroundLabel;
 
         Controllers::DateTime& dateTimeController;
-        Controllers::NotificationManager& notificatioManager;
         Controllers::Settings& settingsController;
 
         lv_task_t* taskRefresh;

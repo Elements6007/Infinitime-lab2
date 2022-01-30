@@ -3,18 +3,25 @@
 #include <date/date.h>
 #include <lvgl/lvgl.h>
 #include <cstdio>
+#include "displayapp/screens/BatteryIcon.h"
+#include "displayapp/screens/BleIcon.h"
+#include "displayapp/screens/NotificationIcon.h"
 #include "displayapp/screens/Symbols.h"
+#include "components/battery/BatteryController.h"
+#include "components/ble/BleController.h"
+#include "components/ble/NotificationManager.h"
+#include "components/heartrate/HeartRateController.h"
+#include "components/motion/MotionController.h"
 #include "components/settings/Settings.h"
+
 using namespace Pinetime::Applications::Screens;
 
 WatchFaceSimple::WatchFaceSimple(DisplayApp* app,
                                    Controllers::DateTime& dateTimeController,
-                                   Controllers::NotificationManager& notificatioManager,
                                    Controllers::Settings& settingsController)
   : Screen(app),
     currentDateTime {{}},
     dateTimeController {dateTimeController},
-    notificatioManager {notificatioManager},
     settingsController {settingsController} {
   settingsController.SetClockFace(4);
 
