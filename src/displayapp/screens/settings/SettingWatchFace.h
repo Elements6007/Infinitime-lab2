@@ -21,9 +21,13 @@ namespace Pinetime {
 
       private:
         static constexpr std::array<const char*, 5> options = {" Digital face", " Analog face", " PineTimeStyle", "Terminal face", " Simpe face"};
-        Controllers::Settings& settingsController;
+        Controllers::Settings& settingsController; 
 
         lv_obj_t* cbOption[options.size()];
+
+        ScreenList<2> screens;  
+        std::unique_ptr<screen> CreateScreen1();
+        std::unique_ptr<screen> CreateScreen2();
       };
     }
   }
