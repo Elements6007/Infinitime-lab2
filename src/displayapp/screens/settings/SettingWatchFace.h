@@ -25,9 +25,6 @@ namespace Pinetime {
 
         lv_obj_t* cbOption[options.size()];
 
-        ScreenList<2> screens;  
-        std::unique_ptr<screen> CreateScreen1();
-        std::unique_ptr<screen> CreateScreen2();
       };
     }
   }
