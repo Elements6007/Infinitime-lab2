@@ -4,6 +4,7 @@
 #include <nrf_log.h>
 #include "displayapp/DisplayApp.h"
 #include "displayapp/screens/Symbols.h"
+#include "displayapp/screens/List.h"
 
 using namespace Pinetime::Applications::Screens;
 
@@ -21,9 +22,18 @@ namespace {
   }
 }
 
-SettingSetDate::SettingSetDate(Pinetime::Applications::DisplayApp *app, Pinetime::Controllers::DateTime &dateTimeController) :
-  Screen(app),
-  dateTimeController {dateTimeController} {
+SettingSetDate::SettingSetDate(Pinetime::Applications::DisplayApp *app, Pinetime::Controllers::DateTime &dateTimeController)
+: Screen(app),
+  dateTimeController {dateTimeController} screens {app,
+  settingsController.GetSettingsMenu(),
+             {[this]() -> std::unique_ptr<Screen> {
+                return CreateScreen1();
+              },
+              [this]() -> std::unique_ptr<Screen> {
+                return CreateScreen2();
+              },
+             Screens::ScreenListModes::UpDown} {
+} {
   lv_obj_t * title = lv_label_create(lv_scr_act(), nullptr);
   lv_label_set_text_static(title, "Set current date");
   lv_label_set_align(title, LV_LABEL_ALIGN_CENTER);

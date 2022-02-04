@@ -4,6 +4,7 @@
 #include <lvgl/lvgl.h>
 #include "components/datetime/DateTimeController.h"
 #include "displayapp/screens/Screen.h"
+#include "displayapp/screens/List.h"
 
 namespace Pinetime {
   namespace Applications {
@@ -35,6 +36,10 @@ namespace Pinetime {
           int MaximumDayOfMonth() const;
           void CheckDay();
           void UpdateMonthLabel();
+
+          ScreenList<2> screens;
+          std::unique_ptr<Screen> CreateScreen1();
+          std::unique_ptr<Screen> CreateScreen2();
       };
     }
   }
