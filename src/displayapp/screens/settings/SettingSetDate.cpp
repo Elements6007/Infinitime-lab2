@@ -4,6 +4,8 @@
 #include <nrf_log.h>
 #include "displayapp/DisplayApp.h"
 #include "displayapp/screens/Symbols.h"
+#include "displayapp/screens/ScreenList.h"
+#include "displayapp/screens/List.h"
 
 using namespace Pinetime::Applications::Screens;
 
@@ -23,7 +25,7 @@ namespace {
 
 SettingSetDate::SettingSetDate(Pinetime::Applications::DisplayApp *app, Pinetime::Controllers::DateTime &dateTimeController)
 : Screen(app),
-  dateTimeController {dateTimeController} screens {app,
+  dateTimeController {dateTimeController}, screens {app,
   settingsController.GetSettingsMenu(),
              {[this]() -> std::unique_ptr<Screen> {
                 return CreateScreen1();
