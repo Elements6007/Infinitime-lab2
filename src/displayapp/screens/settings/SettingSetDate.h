@@ -4,7 +4,7 @@
 #include <lvgl/lvgl.h>
 #include "components/datetime/DateTimeController.h"
 #include "displayapp/screens/Screen.h"
-#include "displayapp/screens/List.h"
+#include "displayapp/screens/ScreenList.h"
 
 namespace Pinetime {
   namespace Applications {
@@ -38,6 +38,7 @@ namespace Pinetime {
           void UpdateMonthLabel();
 
           ScreenList<2> screens;
+
           std::unique_ptr<Screen> CreateScreen1();
           std::unique_ptr<Screen> CreateScreen2();
       };
