@@ -33,8 +33,9 @@ dateTimeController {dateTimeController}, screens {app,
                 return CreateScreen2();
               }},
              Screens::ScreenListModes::UpDown} {
-} {
+} 
 
+std::unique_ptr<Screen> SettingSetDate::CreateScreen1() {
   lv_obj_t * title = lv_label_create(lv_scr_act(), nullptr);
   lv_label_set_text_static(title, "Set current date");
   lv_label_set_align(title, LV_LABEL_ALIGN_CENTER);
@@ -118,6 +119,8 @@ dateTimeController {dateTimeController}, screens {app,
   lv_obj_align(btnSetTime, lv_scr_act(), LV_ALIGN_IN_BOTTOM_MID, 0, 0);
   lv_obj_set_style_local_value_str(btnSetTime, LV_BTN_PART_MAIN, LV_STATE_DEFAULT, "Set");
   lv_obj_set_event_cb(btnSetTime, event_handler);
+
+  return std::make_unique<Screens::Page>(1, 2, app);
 }
 
 SettingSetDate::~SettingSetDate() {
