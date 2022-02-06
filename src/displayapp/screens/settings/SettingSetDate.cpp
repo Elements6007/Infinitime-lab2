@@ -26,7 +26,6 @@ namespace {
 SettingSetDate::SettingSetDate(Pinetime::Applications::DisplayApp *app, Pinetime::Controllers::DateTime &dateTimeController)
 : Screen(app),
   dateTimeController {dateTimeController}, screens {app,
-  settingsController.GetSettingsMenu(),
              {[this]() -> std::unique_ptr<Screen> {
                 return CreateScreen1();
               },
