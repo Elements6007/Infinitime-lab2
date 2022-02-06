@@ -33,7 +33,7 @@ screens {app,
                 return CreateScreen2();
               }},
              Screens::ScreenListModes::UpDown} {
-}
+} {
 
   lv_obj_t * title = lv_label_create(lv_scr_act(), nullptr);
   lv_label_set_text_static(title, "Set current date");
