@@ -124,7 +124,7 @@ std::unique_ptr<Screen> SettingSetDate::CreateScreen1() {
 }
 
 
-std::unique_ptr<Screen> SettingSetDate::CreateScreen1() {
+std::unique_ptr<Screen> SettingSetDate::CreateScreen2() {
  
   lv_obj_t * onion = lv_label_create(lv_scr_act(), nullptr);
   lv_obj_set_style_local_text_color(icon, LV_LABEL_PART_MAIN, LV_STATE_DEFAULT, LV_COLOR_ORANGE);
