@@ -38,6 +38,8 @@ namespace Pinetime {
           void UpdateMonthLabel();
 
           ScreenList<2> screens;
+          
+          static bool sortById(const TaskStatus_t& lhs, const TaskStatus_t& rhs);
 
           std::unique_ptr<Screen> CreateScreen1();
           std::unique_ptr<Screen> CreateScreen2();
