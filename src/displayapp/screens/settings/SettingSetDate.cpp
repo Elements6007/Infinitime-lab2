@@ -65,55 +65,55 @@ std::unique_ptr<Screen> SettingSetDate::CreateScreen1() {
   yearValue = static_cast<int>(dateTimeController.Year());
   if (yearValue < 2021)
     yearValue = 2021;
-  lv_obj_t * lblYear = lv_label_create(lv_scr_act(), nullptr);
+  lblYear = lv_label_create(lv_scr_act(), nullptr);
   lv_label_set_text_fmt(lblYear, "%d", yearValue);
   lv_label_set_align(lblYear, LV_LABEL_ALIGN_CENTER);
   lv_obj_align(lblYear, lv_scr_act(), LV_ALIGN_CENTER, POS_X_YEAR, POS_Y_TEXT);
   lv_obj_set_auto_realign(lblYear, true);
 
-  lv_obj_t * btnDayPlus = lv_btn_create(lv_scr_act(), nullptr);
+  btnDayPlus = lv_btn_create(lv_scr_act(), nullptr);
   btnDayPlus->user_data = this;
   lv_obj_set_size(btnDayPlus, 50, 40);
   lv_obj_align(btnDayPlus, lv_scr_act(), LV_ALIGN_CENTER, POS_X_DAY, POS_Y_PLUS);
   lv_obj_set_style_local_value_str(btnDayPlus, LV_BTN_PART_MAIN, LV_STATE_DEFAULT, "+");
   lv_obj_set_event_cb(btnDayPlus, event_handler);
 
- lv_obj_t * btnDayMinus = lv_btn_create(lv_scr_act(), nullptr);
+  btnDayMinus = lv_btn_create(lv_scr_act(), nullptr);
   btnDayMinus->user_data = this;
   lv_obj_set_size(btnDayMinus, 50, 40);
   lv_obj_align(btnDayMinus, lv_scr_act(), LV_ALIGN_CENTER, POS_X_DAY, POS_Y_MINUS);
   lv_obj_set_style_local_value_str(btnDayMinus, LV_BTN_PART_MAIN, LV_STATE_DEFAULT, "-");
   lv_obj_set_event_cb(btnDayMinus, event_handler);
 
-  lv_obj_t *  btnMonthPlus = lv_btn_create(lv_scr_act(), nullptr);
+  btnMonthPlus = lv_btn_create(lv_scr_act(), nullptr);
   btnMonthPlus->user_data = this;
   lv_obj_set_size(btnMonthPlus, 50, 40);
   lv_obj_align(btnMonthPlus, lv_scr_act(), LV_ALIGN_CENTER, POS_X_MONTH, POS_Y_PLUS);
   lv_obj_set_style_local_value_str(btnMonthPlus, LV_BTN_PART_MAIN, LV_STATE_DEFAULT, "+");
   lv_obj_set_event_cb(btnMonthPlus, event_handler);
 
-  lv_obj_t * btnMonthMinus = lv_btn_create(lv_scr_act(), nullptr);
+  btnMonthMinus = lv_btn_create(lv_scr_act(), nullptr);
   btnMonthMinus->user_data = this;
   lv_obj_set_size(btnMonthMinus, 50, 40);
   lv_obj_align(btnMonthMinus, lv_scr_act(), LV_ALIGN_CENTER, POS_X_MONTH, POS_Y_MINUS);
   lv_obj_set_style_local_value_str(btnMonthMinus, LV_BTN_PART_MAIN, LV_STATE_DEFAULT, "-");
   lv_obj_set_event_cb(btnMonthMinus, event_handler);
 
-  lv_obj_t * btnYearPlus = lv_btn_create(lv_scr_act(), nullptr);
+  btnYearPlus = lv_btn_create(lv_scr_act(), nullptr);
   btnYearPlus->user_data = this;
   lv_obj_set_size(btnYearPlus, 50, 40);
   lv_obj_align(btnYearPlus, lv_scr_act(), LV_ALIGN_CENTER, POS_X_YEAR, POS_Y_PLUS);
   lv_obj_set_style_local_value_str(btnYearPlus, LV_BTN_PART_MAIN, LV_STATE_DEFAULT, "+");
   lv_obj_set_event_cb(btnYearPlus, event_handler);
 
-  lv_obj_t * btnYearMinus = lv_btn_create(lv_scr_act(), nullptr);
+  btnYearMinus = lv_btn_create(lv_scr_act(), nullptr);
   btnYearMinus->user_data = this;
   lv_obj_set_size(btnYearMinus, 50, 40);
   lv_obj_align(btnYearMinus, lv_scr_act(), LV_ALIGN_CENTER, POS_X_YEAR, POS_Y_MINUS);
   lv_obj_set_style_local_value_str(btnYearMinus, LV_BTN_PART_MAIN, LV_STATE_DEFAULT, "-");
   lv_obj_set_event_cb(btnYearMinus, event_handler);
 
-  lv_obj_t * btnSetTime = lv_btn_create(lv_scr_act(), nullptr);
+  btnSetTime = lv_btn_create(lv_scr_act(), nullptr);
   btnSetTime->user_data = this;
   lv_obj_set_size(btnSetTime, 120, 48);
   lv_obj_align(btnSetTime, lv_scr_act(), LV_ALIGN_IN_BOTTOM_MID, 0, 0);
@@ -123,7 +123,6 @@ std::unique_ptr<Screen> SettingSetDate::CreateScreen1() {
 
 
   return std::make_unique<Screens::Label>(0, 2, app, title);
-  // title, icon, lblDay, lblMonth, lblYear, btnDayPlus, btnDayMinus, btnMonthPlus, btnMonthMinus, btnYearPlus, btnYearMinus, btnSetTime
 }
 
 
