@@ -204,7 +204,8 @@ std::unique_ptr<Screen> SettingSetDate::CreateScreen1() {
      lblMonth, Pinetime::Controllers::DateTime::MonthShortToStringLow(static_cast<Pinetime::Controllers::DateTime::Months>(monthValue)));
  }
 
-  return std::make_unique<Screens::Label>(0, 2, app, title, icon, lblDay, lblMonth, lblYear, btnDayPlus, btnDayMinus, btnMonthPlus, btnMonthMinus, btnYearPlus, btnYearMinus, btnSetTime);
+  return std::make_unique<Screens::Label>(0, 2, app, dateTimeController);
+  // title, icon, lblDay, lblMonth, lblYear, btnDayPlus, btnDayMinus, btnMonthPlus, btnMonthMinus, btnYearPlus, btnYearMinus, btnSetTime
 }
 
 
