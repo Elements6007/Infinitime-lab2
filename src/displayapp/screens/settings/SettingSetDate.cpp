@@ -127,10 +127,10 @@ std::unique_ptr<Screen> SettingSetDate::CreateScreen1() {
 std::unique_ptr<Screen> SettingSetDate::CreateScreen2() {
  
   lv_obj_t * onion = lv_label_create(lv_scr_act(), nullptr);
-  lv_obj_set_style_local_text_color(icon, LV_LABEL_PART_MAIN, LV_STATE_DEFAULT, LV_COLOR_ORANGE);
-  lv_label_set_text_static(icon, Symbols::clock);
-  lv_label_set_align(icon, LV_LABEL_ALIGN_CENTER);
-  lv_obj_align(icon, title, LV_ALIGN_OUT_LEFT_MID, -10, 0);
+  lv_obj_set_style_local_text_color(onion, LV_LABEL_PART_MAIN, LV_STATE_DEFAULT, LV_COLOR_ORANGE);
+  lv_label_set_text_static(onion, Symbols::clock);
+  lv_label_set_align(onion, LV_LABEL_ALIGN_CENTER);
+  lv_obj_align(onion, LV_ALIGN_OUT_LEFT_MID, -10, 0);
 
 
   return std::make_unique<Screens::Label>(1, 2, app, label);
