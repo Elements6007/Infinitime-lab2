@@ -122,7 +122,7 @@ std::unique_ptr<Screen> SettingSetDate::CreateScreen1() {
 
 
 
-  return std::make_unique<Screens::Label>(0, 2, app, title);
+  return std::make_unique<Screens::Label>(0, 2, app, title, icon);
 }
 
 
