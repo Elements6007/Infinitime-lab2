@@ -120,6 +120,23 @@ std::unique_ptr<Screen> SettingSetDate::CreateScreen1() {
   lv_obj_set_style_local_value_str(btnSetTime, LV_BTN_PART_MAIN, LV_STATE_DEFAULT, "Set");
   lv_obj_set_event_cb(btnSetTime, event_handler);
 
+
+
+  return std::make_unique<Screens::Label>(0, 2, app, title);
+  // title, icon, lblDay, lblMonth, lblYear, btnDayPlus, btnDayMinus, btnMonthPlus, btnMonthMinus, btnYearPlus, btnYearMinus, btnSetTime
+}
+
+
+std::unique_ptr<Screen> SettingSetDate::CreateScreen2() {
+ 
+  lv_obj_t * onion = lv_label_create(lv_scr_act(), nullptr);
+  lv_label_set_text(onion, Symbols::phone);
+  lv_obj_align(onion, lv_scr_act(), LV_ALIGN_IN_TOP_RIGHT, 0, 0);
+
+
+  return std::make_unique<Screens::Label>(1, 2, app, onion);
+}
+
   void SettingSetDate::HandleButtonPress(lv_obj_t *object, lv_event_t event) {
   if (event != LV_EVENT_CLICKED)
     return;
@@ -174,7 +191,7 @@ std::unique_ptr<Screen> SettingSetDate::CreateScreen1() {
   }
 }
 
- int SettingSetDate::MaximumDayOfMonth() const {
+int SettingSetDate::MaximumDayOfMonth() const {
   switch (monthValue) {
     case 2:
       if ((((yearValue % 4) == 0) && ((yearValue % 100) != 0)) || ((yearValue % 400) == 0))
@@ -190,33 +207,18 @@ std::unique_ptr<Screen> SettingSetDate::CreateScreen1() {
   }
 }
 
- void SettingSetDate::CheckDay() {
-   int maxDay = MaximumDayOfMonth();
-   if (dayValue > maxDay) {
-     dayValue = maxDay;
-     lv_label_set_text_fmt(lblDay, "%d", dayValue);
-     lv_obj_align(lblDay, lv_scr_act(), LV_ALIGN_CENTER, POS_X_DAY, POS_Y_TEXT);
-   }
- }
-
- void SettingSetDate::UpdateMonthLabel() {
-   lv_label_set_text_static(
-     lblMonth, Pinetime::Controllers::DateTime::MonthShortToStringLow(static_cast<Pinetime::Controllers::DateTime::Months>(monthValue)));
- }
-
-  return std::make_unique<Screens::Label>(0, 2, app, title);
-  // title, icon, lblDay, lblMonth, lblYear, btnDayPlus, btnDayMinus, btnMonthPlus, btnMonthMinus, btnYearPlus, btnYearMinus, btnSetTime
+void SettingSetDate::CheckDay() {
+ int maxDay = MaximumDayOfMonth();
+ if (dayValue > maxDay) {
+   dayValue = maxDay;
+   lv_label_set_text_fmt(lblDay, "%d", dayValue);
+   lv_obj_align(lblDay, lv_scr_act(), LV_ALIGN_CENTER, POS_X_DAY, POS_Y_TEXT);
+  }
 }
 
-
-std::unique_ptr<Screen> SettingSetDate::CreateScreen2() {
- 
-  lv_obj_t * onion = lv_label_create(lv_scr_act(), nullptr);
-  lv_label_set_text(onion, Symbols::phone);
-  lv_obj_align(onion, lv_scr_act(), LV_ALIGN_IN_TOP_RIGHT, 0, 0);
-
-
-  return std::make_unique<Screens::Label>(1, 2, app, onion);
+void SettingSetDate::UpdateMonthLabel() {
+ lv_label_set_text_static(
+    lblMonth, Pinetime::Controllers::DateTime::MonthShortToStringLow(static_cast<Pinetime::Controllers::DateTime::Months>(monthValue)));
 }
 
 SettingSetDate::~SettingSetDate() {
