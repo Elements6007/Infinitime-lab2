@@ -209,7 +209,7 @@ void SettingSetDate::UpdateMonthLabel() {
     lblMonth, Pinetime::Controllers::DateTime::MonthShortToStringLow(static_cast<Pinetime::Controllers::DateTime::Months>(monthValue)));
 }
 
-  return std::make_unique<Screens::Label>(0, 2, app, title);
+  return std::make_unique<Screens::Label>(0, 2, app, dateTimeController);
 }
 
 
