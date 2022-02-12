@@ -128,7 +128,7 @@ std::unique_ptr<Screen> SettingSetDate::CreateScreen1() {
   lv_obj_set_style_local_value_str(btnSetTime, LV_BTN_PART_MAIN, LV_STATE_DEFAULT, "Set");
   lv_obj_set_event_cb(btnSetTime, event_handler);
 
-  return std::unique_ptr<Screen>(new Screens::Label(0, 2, app, title));
+  return std::make_unique<Screens::Label>(0, 2, app, title);
 }
 
 
@@ -139,7 +139,7 @@ std::unique_ptr<Screen> SettingSetDate::CreateScreen2() {
   lv_obj_align(onion, lv_scr_act(), LV_ALIGN_IN_TOP_RIGHT, 0, 0);
 
 
-  return std::unique_ptr<Screen>(new Screens::Label(1, 2, app, onion));
+  return std::make_unique<Screens::Label>(1, 2, app, onion);
 }
 
     void SettingSetDate::HandleButtonPress(lv_obj_t *object, lv_event_t event) {
