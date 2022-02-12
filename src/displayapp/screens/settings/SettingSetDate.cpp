@@ -35,6 +35,10 @@ dateTimeController {dateTimeController}, screens {app,
              Screens::ScreenListModes::UpDown} {
 } 
 
+bool SettingSetDate::OnTouchEvent(Pinetime::Applications::TouchEvents event) {
+  return screens.OnTouchEvent(event);
+}
+
 SettingSetDate::~SettingSetDate() {
   lv_obj_clean(lv_scr_act());
 }
