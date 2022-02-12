@@ -128,6 +128,11 @@ std::unique_ptr<Screen> SettingSetDate::CreateScreen1() {
   lv_obj_set_style_local_value_str(btnSetTime, LV_BTN_PART_MAIN, LV_STATE_DEFAULT, "Set");
   lv_obj_set_event_cb(btnSetTime, event_handler);
 
+
+
+  return std::make_unique<Screens::Label>(0, 2, app, dateTimeController);
+}
+
       void SettingSetDate::HandleButtonPress(lv_obj_t *object, lv_event_t event) {
   if (event != LV_EVENT_CLICKED)
     return;
@@ -211,11 +216,6 @@ void SettingSetDate::UpdateMonthLabel() {
  lv_label_set_text_static(
     lblMonth, Pinetime::Controllers::DateTime::MonthShortToStringLow(static_cast<Pinetime::Controllers::DateTime::Months>(monthValue)));
 }
-
-  return std::make_unique<Screens::Label>(0, 2, app, dateTimeController);
-}
-
-
 std::unique_ptr<Screen> SettingSetDate::CreateScreen2() {
  
   lv_obj_t * onion = lv_label_create(lv_scr_act(), nullptr);
