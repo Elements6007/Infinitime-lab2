@@ -25,7 +25,7 @@ ApplicationList::ApplicationList(Pinetime::Applications::DisplayApp* app,
                [this]() -> std::unique_ptr<Screen> {
                  return CreateScreen2();
                },
-               //[this]() -> std::unique_ptr<Screen> { return CreateScreen3(); }
+               [this]() -> std::unique_ptr<Screen> { return CreateScreen3(); }
              },
              Screens::ScreenListModes::UpDown} {
 }
