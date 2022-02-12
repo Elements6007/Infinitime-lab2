@@ -625,6 +625,7 @@ set(INCLUDE_FILES
         displayapp/screens/Tile.h
         displayapp/screens/Meter.h
         displayapp/screens/InfiniPaint.h
+        displayapp/screens/pagetest.h
         displayapp/screens/StopWatch.h
         displayapp/screens/Paddle.h
         displayapp/screens/DropDownDemo.h
