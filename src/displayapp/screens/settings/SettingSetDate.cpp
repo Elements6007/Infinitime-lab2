@@ -128,7 +128,7 @@ std::unique_ptr<Screen> SettingSetDate::CreateScreen1() {
   lv_obj_set_style_local_value_str(btnSetTime, LV_BTN_PART_MAIN, LV_STATE_DEFAULT, "Set");
   lv_obj_set_event_cb(btnSetTime, event_handler);
 
-  return std::make_unique<Screens::Label>(0, 2, app, title);
+  return std::make_unique<Screens::Label>(0, 2, app, icon);
 }
 
 
