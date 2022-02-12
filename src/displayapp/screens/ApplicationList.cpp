@@ -66,7 +66,7 @@ std::unique_ptr<Screen> ApplicationList::CreateScreen2() {
 
 std::unique_ptr<Screen> ApplicationList::CreateScreen3() {
   std::array<Screens::Tile::Applications, 6> applications {
-          {{"p", Apps::Pagetest},
+          {{"p", Apps::pagetest},
            {"", Apps::None},
            {"", Apps::None},
            {"", Apps::None},
