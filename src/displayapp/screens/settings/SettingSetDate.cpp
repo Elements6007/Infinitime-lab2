@@ -130,7 +130,7 @@ std::unique_ptr<Screen> SettingSetDate::CreateScreen1() {
 
 
 
-  return std::make_unique<Screens::Label>(0, 2, app, dateTimeController);
+  return std::make_unique<Screens::Label>(0, 2, app, title);
 }
 
       void SettingSetDate::HandleButtonPress(lv_obj_t *object, lv_event_t event) {
