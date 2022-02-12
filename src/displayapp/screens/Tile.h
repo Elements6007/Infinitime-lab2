@@ -41,8 +41,8 @@ namespace Pinetime {
 
         lv_obj_t* label_time;
         lv_obj_t* batteryIcon;
-        lv_point_t pageIndicatorBasePoints[3];
-        lv_point_t pageIndicatorPoints[3];
+        lv_point_t pageIndicatorBasePoints[2];
+        lv_point_t pageIndicatorPoints[2];
         lv_obj_t* pageIndicatorBase;
         lv_obj_t* pageIndicator;
         lv_obj_t* btnm1;

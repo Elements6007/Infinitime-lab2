@@ -49,7 +49,7 @@ std::unique_ptr<Screen> ApplicationList::CreateScreen1() {
     {Symbols::hourGlass, Apps::Timer},
   }};
 
-  return std::make_unique<Screens::Tile>(0, 2, app, settingsController, batteryController, dateTimeController, applications);
+  return std::make_unique<Screens::Tile>(0, 3, app, settingsController, batteryController, dateTimeController, applications);
 }
 
 std::unique_ptr<Screen> ApplicationList::CreateScreen2() {
@@ -62,7 +62,7 @@ std::unique_ptr<Screen> ApplicationList::CreateScreen2() {
     {Symbols::clock, Apps::Alarm},
   }};
 
-  return std::make_unique<Screens::Tile>(1, 2, app, settingsController, batteryController, dateTimeController, applications);
+  return std::make_unique<Screens::Tile>(1, 3, app, settingsController, batteryController, dateTimeController, applications);
 }
 
 std::unique_ptr<Screen> ApplicationList::CreateScreen3() {

@@ -1,6 +1,7 @@
 #pragma once
 
 #include <memory>
+#include <lvgl/lvgl.h>
 #include "displayapp/screens/Screen.h"
 #include "displayapp/screens/ScreenList.h"
 
@@ -15,6 +16,12 @@ namespace Pinetime {
         explicit pagetest(DisplayApp* app);
         ~pagetest() override;
         bool OnTouchEvent(TouchEvents event) override;
+
+
+        private:
+        
+        lv_obj_t* onion;
+        lv_obj_t* onion;
 
         ScreenList<2> screens;
 
