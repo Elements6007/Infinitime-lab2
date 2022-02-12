@@ -21,12 +21,12 @@ namespace Pinetime {
         private:
         
         lv_obj_t* onion;
-        lv_obj_t* onion;
+        lv_obj_t* obama;
 
-        ScreenList<2> screens;
+      //  ScreenList<2> screens;
 
-        std::unique_ptr<Screen> CreateScreen1();
-        std::unique_ptr<Screen> CreateScreen2();
+      //  std::unique_ptr<Screen> CreateScreen1();
+      //  std::unique_ptr<Screen> CreateScreen2();
       };
     }
   }
