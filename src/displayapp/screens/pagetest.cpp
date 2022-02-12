@@ -29,7 +29,7 @@ bool pagetest::OnTouchEvent(Pinetime::Applications::TouchEvents event) {
 
 std::unique_ptr<Screen> pagetest::CreateScreen1() {
  
-  lv_obj_t * onion = lv_label_create(lv_scr_act(), nullptr);
+  lv_obj_t* onion = lv_label_create(lv_scr_act(), nullptr);
   lv_label_set_text(onion, Symbols::phone);
   lv_obj_align(onion, lv_scr_act(), LV_ALIGN_IN_TOP_RIGHT, 0, 0);
 
@@ -38,7 +38,7 @@ std::unique_ptr<Screen> pagetest::CreateScreen1() {
 
 std::unique_ptr<Screen> pagetest::CreateScreen2() {
 
-  lv_obj_t * onion = lv_label_create(lv_scr_act(), nullptr);
+  lv_obj_t* onion = lv_label_create(lv_scr_act(), nullptr);
   lv_label_set_text(onion, Symbols::phone);
   lv_obj_align(onion, lv_scr_act(), LV_ALIGN_IN_TOP_RIGHT, 0, 0);
 
