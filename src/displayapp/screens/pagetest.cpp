@@ -17,17 +17,7 @@ pagetest::pagetest(Pinetime::Applications::DisplayApp* app)
  //               return CreateScreen2();
  //             }},
  //            Screens::ScreenListModes::UpDown} {
-}
-
-pagetest::~pagetest() {
-  lv_obj_clean(lv_scr_act());
-}
-
-bool pagetest::OnTouchEvent(Pinetime::Applications::TouchEvents event) {
-  return screens.OnTouchEvent(event);
-}
-
-//std::unique_ptr<Screen> pagetest::CreateScreen1() {
+   //std::unique_ptr<Screen> pagetest::CreateScreen1() {
  
   lv_obj_t* onion = lv_label_create(lv_scr_act(), nullptr);
   lv_label_set_text(onion, Symbols::phone);
@@ -44,3 +34,13 @@ bool pagetest::OnTouchEvent(Pinetime::Applications::TouchEvents event) {
 
 //  return std::make_unique<Screens::Label>(1, 2, app, onion);
 //}
+}
+
+pagetest::~pagetest() {
+  lv_obj_clean(lv_scr_act());
+}
+
+bool pagetest::OnTouchEvent(Pinetime::Applications::TouchEvents event) {
+  return screens.OnTouchEvent(event);
+}
+

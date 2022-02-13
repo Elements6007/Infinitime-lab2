@@ -18,10 +18,10 @@ namespace Pinetime {
         bool OnTouchEvent(TouchEvents event) override;
 
 
-        private:
+       // private:
         
-        lv_obj_t* onion;
-        lv_obj_t* obama;
+        //lv_obj_t* onion;
+        //lv_obj_t* obama;
 
       //  ScreenList<2> screens;
 
