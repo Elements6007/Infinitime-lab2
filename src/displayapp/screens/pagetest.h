@@ -6,7 +6,7 @@
 namespace Pinetime {
   namespace Applications {
     namespace Screens {
-      class MyApp : public Screen {
+      class pagetest : public Screen {
       public:
         pagetest(DisplayApp* app);
         ~pagetest() override;
