@@ -383,7 +383,7 @@ void DisplayApp::LoadApp(Apps app, DisplayApp::FullRefreshDirections direction) 
       currentScreen = std::make_unique<Screens::Alarm>(this, alarmController);
       break; 
      case Apps::pagetest:
-      currentScreen = std::make_unique<Screens::pagetest>(this, lvgl);
+      currentScreen = std::make_unique<Screens::pagetest>();
       break;
 
     // Settings
