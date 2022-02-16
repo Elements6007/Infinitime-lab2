@@ -31,7 +31,7 @@
 #include "displayapp/screens/Steps.h"
 #include "displayapp/screens/PassKey.h"
 #include "displayapp/screens/Error.h"
-//#include "displayapp/screens/pagetest.h"
+#include "displayapp/screens/pagetest.h"
 
 #include "drivers/Cst816s.h"
 #include "drivers/St7789.h"
@@ -473,9 +473,9 @@ void DisplayApp::LoadApp(Apps app, DisplayApp::FullRefreshDirections direction) 
     case Apps::Steps:
       currentScreen = std::make_unique<Screens::Steps>(this, motionController, settingsController);
       break;
-    /*case Apps::pagetest:
+    case Apps::pagetest:
       currentScreen = std::make_unique<Screens::pagetest>(this, lvgl);
-      break;*/
+      break;
   }
   currentApp = app;
 }
