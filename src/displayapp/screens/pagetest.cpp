@@ -3,7 +3,7 @@
 
 using namespace Pinetime::Applications::Screens;
 
-taskRefresh = lv_task_create(RefreshTaskCallback, LV_DISP_DEF_REFR_PERIOD, LV_TASK_PRIO_MID, this);
+//taskRefresh = lv_task_create(RefreshTaskCallback, LV_DISP_DEF_REFR_PERIOD, LV_TASK_PRIO_MID, this);
 
 pagetest::pagetest(DisplayApp* app) : Screen(app) {
   lv_obj_t* title = lv_label_create(lv_scr_act(), nullptr);
