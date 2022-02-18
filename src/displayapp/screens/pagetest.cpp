@@ -1,4 +1,5 @@
 #include "displayapp/screens/pagetest.h"
+
 #include "displayapp/screens/Screen.h"
 #include "displayapp/DisplayApp.h"
 #include "displayapp/screens/Label.h"
@@ -7,7 +8,7 @@
 using namespace pinetime::applications::screens;
 
 pagetest::pagetest(Pinetime::Applications::DisplayApp* app)
-  : Screen(app)//,
+  : Screen(app),
     screens {app,
              0,
              {[this]() -> std::unique_ptr<Screen> {

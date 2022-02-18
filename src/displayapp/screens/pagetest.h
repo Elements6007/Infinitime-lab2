@@ -7,6 +7,7 @@
 
 namespace Pinetime {
   namespace Applications {
+    class DisplayApp;
     namespace Screens {
       class pagetest : public Screen {
       public:
