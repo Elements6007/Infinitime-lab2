@@ -26,6 +26,11 @@ pagetest::pagetest(Pinetime::Applications::DisplayApp* app)
   lv_label_set_text(onion, Symbols::phone);
   lv_obj_align(onion, lv_scr_act(), LV_ALIGN_IN_TOP_RIGHT, 0, 0);
 
+  lv_obj_t* obama = lv_label_create(lv_scr_act(), nullptr);
+  lv_label_set_text(obama, Symbols::home);
+  lv_obj_align(obama, lv_scr_act(), LV_ALIGN_CENTER, 0, 0);
+
+
   return std::make_unique<Screens::Label>(0, 2, app, onion);
 }
 
