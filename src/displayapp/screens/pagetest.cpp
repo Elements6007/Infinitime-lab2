@@ -5,7 +5,7 @@
 #include "displayapp/screens/Label.h"
 #include "displayapp/screens/Symbols.h"
 
-using namespace pinetime::applications::screens;
+using namespace Pinetime::applications::screens;
 
 pagetest::pagetest(Pinetime::Applications::DisplayApp* app)
   : Screen(app),

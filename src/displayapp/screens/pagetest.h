@@ -4,7 +4,6 @@
 
 #include "displayapp/screens/Screen.h"
 #include "displayapp/screens/ScreenList.h"
-#include "components/settings/Settings.h"
 
 namespace Pinetime {
   namespace Applications {
