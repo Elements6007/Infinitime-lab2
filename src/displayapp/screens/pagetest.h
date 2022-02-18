@@ -16,6 +16,8 @@ namespace Pinetime {
 
       private:
         
+
+        int dayValue;
         lv_obj_t * onion;
         lv_obj_t * obama;
         lv_obj_t * title; 
