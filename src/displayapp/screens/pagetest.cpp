@@ -7,8 +7,8 @@
 
 using namespace Pinetime::Applications::Screens;
 
-pagetest::pagetest(Pinetime::Applications::DisplayApp* app)
-  : Screen(app),
+pagetest::pagetest(Pinetime::Applications::DisplayApp* app, Pinetime::Controllers::DateTime &dateTimeController) 
+  : Screen(app), dateTimeController {dateTimeController},
     screens {app,
              0,
              {[this]() -> std::unique_ptr<Screen> {

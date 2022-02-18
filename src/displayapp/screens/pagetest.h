@@ -2,6 +2,7 @@
 
 #include <memory>
 
+#include "components/datetime/DateTimeController.h"
 #include "displayapp/screens/Screen.h"
 #include "displayapp/screens/ScreenList.h"
 
@@ -10,12 +11,12 @@ namespace Pinetime {
     namespace Screens {
       class pagetest : public Screen {
       public:
-        explicit pagetest(DisplayApp* app);
+        explicit pagetest(DisplayApp* app, Pinetime::Controllers::DateTime &dateTimeController);
         ~pagetest() override;
         bool OnTouchEvent(TouchEvents event) override;
 
       private:
-        
+        Controllers::DateTime& dateTimeController;
 
         int dayValue;
         lv_obj_t * onion;
