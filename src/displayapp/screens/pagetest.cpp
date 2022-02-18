@@ -22,11 +22,11 @@ pagetest::pagetest(Pinetime::Applications::DisplayApp* app)
 
   std::unique_ptr<Screen> pagetest::CreateScreen1() {
  
-  lv_obj_t* onion = lv_label_create(lv_scr_act(), nullptr);
+  onion = lv_label_create(lv_scr_act(), nullptr);
   lv_label_set_text(onion, Symbols::phone);
   lv_obj_align(onion, lv_scr_act(), LV_ALIGN_IN_TOP_RIGHT, 0, 0);
 
-  lv_obj_t* obama = lv_label_create(lv_scr_act(), nullptr);
+  obama = lv_label_create(lv_scr_act(), nullptr);
   lv_label_set_text(obama, Symbols::home);
   lv_obj_align(obama, lv_scr_act(), LV_ALIGN_CENTER, 0, 0);
 
@@ -37,11 +37,11 @@ pagetest::pagetest(Pinetime::Applications::DisplayApp* app)
 
 std::unique_ptr<Screen> pagetest::CreateScreen2() {
 
-  lv_obj_t* obama = lv_label_create(lv_scr_act(), nullptr);
-  lv_label_set_text(obama, Symbols::phone);
-  lv_obj_align(obama, lv_scr_act(), LV_ALIGN_CENTER, 0, 0);
+  title = lv_label_create(lv_scr_act(), nullptr);
+  lv_label_set_text(title, Symbols::phone);
+  lv_obj_align(title, lv_scr_act(), LV_ALIGN_CENTER, 0, 0);
 
-  return std::make_unique<Screens::Label>(1, 2, app, obama);
+  return std::make_unique<Screens::Label>(1, 2, app, title);
 }
 
 

@@ -15,7 +15,10 @@ namespace Pinetime {
         bool OnTouchEvent(TouchEvents event) override;
 
       private:
-  
+        
+        lv_obj_t * onion;
+        lv_obj_t * obama;
+        lv_obj_t * title; 
 
         ScreenList<2> screens;
         std::unique_ptr<Screen> CreateScreen1();
