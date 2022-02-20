@@ -64,7 +64,7 @@ std::unique_ptr<Screen> SettingSetDate::CreateScreen1() {
   lv_obj_align(lblDay, lv_scr_act(), LV_ALIGN_CENTER, POS_X_DAY, POS_Y_TEXT);
   lv_obj_set_auto_realign(lblDay, true);
 
-  /*monthValue = static_cast<int>(dateTimeController.Month());
+  monthValue = static_cast<int>(dateTimeController.Month());
   lv_obj_t * lblMonth = lv_label_create(lv_scr_act(), nullptr);
   UpdateMonthLabel();
   lv_label_set_align(lblMonth, LV_LABEL_ALIGN_CENTER);
@@ -80,7 +80,7 @@ std::unique_ptr<Screen> SettingSetDate::CreateScreen1() {
   lv_obj_align(lblYear, lv_scr_act(), LV_ALIGN_CENTER, POS_X_YEAR, POS_Y_TEXT);
   lv_obj_set_auto_realign(lblYear, true);
 
-  btnDayPlus = lv_btn_create(lv_scr_act(), nullptr);
+  /*btnDayPlus = lv_btn_create(lv_scr_act(), nullptr);
   btnDayPlus->user_data = this;
   lv_obj_set_size(btnDayPlus, 50, 40);
   lv_obj_align(btnDayPlus, lv_scr_act(), LV_ALIGN_CENTER, POS_X_DAY, POS_Y_PLUS);
