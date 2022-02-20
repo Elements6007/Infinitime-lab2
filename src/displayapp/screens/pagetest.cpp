@@ -7,8 +7,8 @@
 
 using namespace Pinetime::Applications::Screens;
 
-pagetest::pagetest(Pinetime::Applications::DisplayApp* app, Pinetime::Controllers::DateTime &dateTimeController) 
-  : Screen(app), dateTimeController {dateTimeController},
+pagetest::pagetest(Pinetime::Applications::DisplayApp* app) 
+  : Screen(app),
     screens {app,
              0,
              {[this]() -> std::unique_ptr<Screen> {
@@ -25,13 +25,6 @@ std::unique_ptr<Screen> pagetest::CreateScreen1() {
   onion = lv_label_create(lv_scr_act(), nullptr);
   lv_label_set_text(onion, Symbols::phone);
   lv_obj_align(onion, lv_scr_act(), LV_ALIGN_IN_TOP_RIGHT, 0, 0);
-
-  dayValue = static_cast<int>(dateTimeController.Day());
-  lv_obj_t * lblDay = lv_label_create(lv_scr_act(), nullptr);
-  lv_label_set_text_fmt(lblDay, "%d", dayValue);
-  lv_label_set_align(lblDay, LV_LABEL_ALIGN_CENTER);
-  lv_obj_align(lblDay, lv_scr_act(), LV_ALIGN_CENTER, 0, 0);
-  lv_obj_set_auto_realign(lblDay, true);
   
   obama = lv_label_create(lv_scr_act(), nullptr);
   lv_label_set_text(obama, Symbols::home);
