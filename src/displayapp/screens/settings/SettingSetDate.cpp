@@ -44,6 +44,7 @@ SettingSetDate::~SettingSetDate() {
 }
 
 std::unique_ptr<Screen> SettingSetDate::CreateScreen1() {
+
   lv_obj_t * title = lv_label_create(lv_scr_act(), nullptr);
   lv_label_set_text_static(title, "Set current date");
   lv_label_set_align(title, LV_LABEL_ALIGN_CENTER);
@@ -133,7 +134,7 @@ std::unique_ptr<Screen> SettingSetDate::CreateScreen1() {
   return std::make_unique<Screens::Label>(0, 2, app, title);
 }
 
-/* void SettingSetDate::HandleButtonPress(lv_obj_t *object, lv_event_t event) {
+ void SettingSetDate::HandleButtonPress(lv_obj_t *object, lv_event_t event) {
   if (event != LV_EVENT_CLICKED)
     return;
 
@@ -203,7 +204,7 @@ int SettingSetDate::MaximumDayOfMonth() const {
   }
 }
 
-void SettingSetDate::CheckDay() {
+/*void SettingSetDate::CheckDay() {
  int maxDay = MaximumDayOfMonth();
  if (dayValue > maxDay) {
    dayValue = maxDay;
