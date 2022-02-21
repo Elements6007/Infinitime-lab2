@@ -154,14 +154,14 @@ std::unique_ptr<Screen> SettingSetDate::CreateScreen1() {
     monthValue++;
     if (monthValue > 12)
       monthValue = 1;
-    UpdateMonthLabel();
+    //UpdateMonthLabel();
     lv_btn_set_state(btnSetTime, LV_BTN_STATE_RELEASED);
     CheckDay();
   } else if (object == btnMonthMinus) {
     monthValue--;
     if (monthValue < 1)
       monthValue = 12;
-    UpdateMonthLabel();
+   // UpdateMonthLabel();
     lv_btn_set_state(btnSetTime, LV_BTN_STATE_RELEASED);
     CheckDay();
   } else if (object == btnYearPlus) {
