@@ -147,7 +147,7 @@ std::unique_ptr<Screen> SettingSetDate::CreateScreen1() {
   } else if (object == btnDayMinus) {
     dayValue--;
     if (dayValue < 1)
-   /*   dayValue = MaximumDayOfMonth();
+    dayValue = MaximumDayOfMonth();
     lv_label_set_text_fmt(lblDay, "%d", dayValue);
     lv_btn_set_state(btnSetTime, LV_BTN_STATE_RELEASED);
   } else if (object == btnMonthPlus) {
@@ -163,7 +163,7 @@ std::unique_ptr<Screen> SettingSetDate::CreateScreen1() {
       monthValue = 12;
     UpdateMonthLabel();
     lv_btn_set_state(btnSetTime, LV_BTN_STATE_RELEASED);
-    CheckDay();*/
+    CheckDay();
   } else if (object == btnYearPlus) {
     yearValue++;
     lv_label_set_text_fmt(lblYear, "%d", yearValue);
@@ -175,9 +175,9 @@ std::unique_ptr<Screen> SettingSetDate::CreateScreen1() {
     lv_btn_set_state(btnSetTime, LV_BTN_STATE_RELEASED);
     CheckDay();
   } else if (object == btnSetTime) {
-    NRF_LOG_INFO("Setting date (manually) to %04d-%02d-%02d", yearValue, /*monthValue,*/ dayValue);
+    NRF_LOG_INFO("Setting date (manually) to %04d-%02d-%02d", yearValue, monthValue, dayValue);
     dateTimeController.SetTime(static_cast<uint16_t>(yearValue),
-                               /*static_cast<uint8_t>(monthValue),*/
+                               static_cast<uint8_t>(monthValue),
                                static_cast<uint8_t>(dayValue),
                                0,
                                dateTimeController.Hours(),
