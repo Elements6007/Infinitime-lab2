@@ -140,14 +140,14 @@ std::unique_ptr<Screen> SettingSetDate::CreateScreen1() {
 
   if (object == btnDayPlus) {
     dayValue++;
-    if (dayValue > MaximumDayOfMonth())
+   /* if (dayValue > MaximumDayOfMonth())
       dayValue = 1;
     lv_label_set_text_fmt(lblDay, "%d", dayValue);
-    lv_btn_set_state(btnSetTime, LV_BTN_STATE_RELEASED);
+    lv_btn_set_state(btnSetTime, LV_BTN_STATE_RELEASED);*/
   } else if (object == btnDayMinus) {
     dayValue--;
     if (dayValue < 1)
-      dayValue = MaximumDayOfMonth();
+   /*   dayValue = MaximumDayOfMonth();
     lv_label_set_text_fmt(lblDay, "%d", dayValue);
     lv_btn_set_state(btnSetTime, LV_BTN_STATE_RELEASED);
   } else if (object == btnMonthPlus) {
@@ -163,7 +163,7 @@ std::unique_ptr<Screen> SettingSetDate::CreateScreen1() {
       monthValue = 12;
     UpdateMonthLabel();
     lv_btn_set_state(btnSetTime, LV_BTN_STATE_RELEASED);
-    CheckDay();
+    CheckDay();*/
   } else if (object == btnYearPlus) {
     yearValue++;
     lv_label_set_text_fmt(lblYear, "%d", yearValue);
