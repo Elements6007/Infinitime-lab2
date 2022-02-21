@@ -64,12 +64,12 @@ std::unique_ptr<Screen> SettingSetDate::CreateScreen1() {
   lv_obj_align(lblDay, lv_scr_act(), LV_ALIGN_CENTER, POS_X_DAY, POS_Y_TEXT);
   lv_obj_set_auto_realign(lblDay, true);
 
-  /*monthValue = static_cast<int>(dateTimeController.Month());
+  monthValue = static_cast<int>(dateTimeController.Month());
   lv_obj_t * lblMonth = lv_label_create(lv_scr_act(), nullptr);
   UpdateMonthLabel();
   lv_label_set_align(lblMonth, LV_LABEL_ALIGN_CENTER);
   lv_obj_align(lblMonth, lv_scr_act(), LV_ALIGN_CENTER, POS_X_MONTH, POS_Y_TEXT);
-  lv_obj_set_auto_realign(lblMonth, true);*/
+  lv_obj_set_auto_realign(lblMonth, true);
 
   yearValue = static_cast<int>(dateTimeController.Year());
   if (yearValue < 2021)
