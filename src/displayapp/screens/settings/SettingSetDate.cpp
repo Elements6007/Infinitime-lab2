@@ -80,7 +80,7 @@ std::unique_ptr<Screen> SettingSetDate::CreateScreen1() {
   lv_obj_align(lblYear, lv_scr_act(), LV_ALIGN_CENTER, POS_X_YEAR, POS_Y_TEXT);
   lv_obj_set_auto_realign(lblYear, true);
 
-  /*btnDayPlus = lv_btn_create(lv_scr_act(), nullptr);
+  btnDayPlus = lv_btn_create(lv_scr_act(), nullptr);
   btnDayPlus->user_data = this;
   lv_obj_set_size(btnDayPlus, 50, 40);
   lv_obj_align(btnDayPlus, lv_scr_act(), LV_ALIGN_CENTER, POS_X_DAY, POS_Y_PLUS);
@@ -127,7 +127,7 @@ std::unique_ptr<Screen> SettingSetDate::CreateScreen1() {
   lv_obj_set_size(btnSetTime, 120, 48);
   lv_obj_align(btnSetTime, lv_scr_act(), LV_ALIGN_IN_BOTTOM_MID, 0, 0);
   lv_obj_set_style_local_value_str(btnSetTime, LV_BTN_PART_MAIN, LV_STATE_DEFAULT, "Set");
-  lv_obj_set_event_cb(btnSetTime, event_handler);*/
+  lv_obj_set_event_cb(btnSetTime, event_handler);
 
 
 
@@ -217,6 +217,7 @@ void SettingSetDate::CheckDay() {
  lv_label_set_text_static(
     lblMonth, Pinetime::Controllers::DateTime::MonthShortToStringLow(static_cast<Pinetime::Controllers::DateTime::Months>(monthValue)));
 }*/
+
 std::unique_ptr<Screen> SettingSetDate::CreateScreen2() {
  
   lv_obj_t * onion = lv_label_create(lv_scr_act(), nullptr);
