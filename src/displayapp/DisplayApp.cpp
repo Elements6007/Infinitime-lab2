@@ -389,7 +389,7 @@ void DisplayApp::LoadApp(Apps app, DisplayApp::FullRefreshDirections direction) 
     // Settings
     case Apps::QuickSettings:
       currentScreen = std::make_unique<Screens::QuickSettings>(
-        this, batteryController, dateTimeController, brightnessController, motorController, settingsController, bleController);
+        this, batteryController, dateTimeController, brightnessController, bleController, motorController, settingsController, );
       ReturnApp(Apps::Clock, FullRefreshDirections::LeftAnim, TouchEvents::SwipeLeft);
       break;
     case Apps::Settings:
