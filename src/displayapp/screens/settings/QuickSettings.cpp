@@ -2,6 +2,8 @@
 #include "displayapp/DisplayApp.h"
 #include "displayapp/screens/Symbols.h"
 #include "displayapp/screens/BatteryIcon.h"
+#include "displayapp/screens/BatteryIcon.h"
+#include "displayapp/screens/BleIcon.h"
 
 using namespace Pinetime::Applications::Screens;
 
@@ -21,12 +23,14 @@ QuickSettings::QuickSettings(Pinetime::Applications::DisplayApp* app,
                              Pinetime::Controllers::Battery& batteryController,
                              Controllers::DateTime& dateTimeController,
                              Controllers::BrightnessController& brightness,
+                             Controllers::Ble& bleController,
                              Controllers::MotorController& motorController,
                              Pinetime::Controllers::Settings& settingsController)
   : Screen(app),
     batteryController {batteryController},
     dateTimeController {dateTimeController},
     brightness {brightness},
+    bleController {bleController},
     motorController {motorController},
     settingsController {settingsController} {
 
