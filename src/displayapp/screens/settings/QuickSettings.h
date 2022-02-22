@@ -36,9 +36,13 @@ namespace Pinetime {
         Controllers::MotorController& motorController;
         Controllers::Settings& settingsController;
 
+        DirtyValue<bool> bleState {};
+
         lv_task_t* taskUpdate;
         lv_obj_t* batteryIcon;
         lv_obj_t* label_time;
+        lv_obj_t* bleIcon;
+
 
         lv_style_t btn_style;
 

@@ -39,6 +39,11 @@ QuickSettings::QuickSettings(Pinetime::Applications::DisplayApp* app,
   lv_label_set_align(label_time, LV_LABEL_ALIGN_CENTER);
   lv_obj_align(label_time, lv_scr_act(), LV_ALIGN_IN_TOP_LEFT, 0, 0);
 
+  bleIcon = lv_label_create(lv_scr_act(), nullptr);
+  lv_obj_set_style_local_text_color(bleIcon, LV_LABEL_PART_MAIN, LV_STATE_DEFAULT, lv_color_hex(0x0082FC));
+  lv_label_set_text(bleIcon, Symbols::bluetooth);
+  lv_obj_align(bleIcon, batteryPlug, LV_ALIGN_OUT_LEFT_MID, -5, 0);
+
   batteryIcon = lv_label_create(lv_scr_act(), nullptr);
   lv_label_set_text(batteryIcon, BatteryIcon::GetBatteryIcon(batteryController.PercentRemaining()));
   lv_obj_align(batteryIcon, nullptr, LV_ALIGN_IN_TOP_RIGHT, 0, 0);
@@ -93,6 +98,11 @@ QuickSettings::QuickSettings(Pinetime::Applications::DisplayApp* app,
     lv_label_set_text_static(btn3_lvl, Symbols::notificationsOn);
   } else {
     lv_label_set_text_static(btn3_lvl, Symbols::notificationsOff);
+  }
+
+  bleState = bleController.IsConnected();
+  if (bleState.IsUpdated()) {
+    lv_label_set_text(bleIcon, BleIcon::GetIcon(bleState.Get()));
   }
 
   btn4 = lv_btn_create(lv_scr_act(), nullptr);
