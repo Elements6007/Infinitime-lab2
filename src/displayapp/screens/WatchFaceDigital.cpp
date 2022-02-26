@@ -46,7 +46,7 @@ WatchFaceDigital::WatchFaceDigital(DisplayApp* app,
   bleIcon = lv_label_create(lv_scr_act(), nullptr);
   lv_obj_set_style_local_text_color(bleIcon, LV_LABEL_PART_MAIN, LV_STATE_DEFAULT, lv_color_hex(0x0082FC));
   lv_label_set_text(bleIcon, Symbols::bluetooth);
-  lv_obj_align(bleIcon, lv_scr_act(), LV_ALIGN_OUT_LEFT_MID, -5, 0);
+  lv_obj_align(bleIcon, batteryPlug, LV_ALIGN_OUT_LEFT_MID, -5, 0);
 
   notificationIcon = lv_label_create(lv_scr_act(), nullptr);
   lv_obj_set_style_local_text_color(notificationIcon, LV_LABEL_PART_MAIN, LV_STATE_DEFAULT, lv_color_hex(0x00FF00));
@@ -144,7 +144,7 @@ void WatchFaceDigital::Refresh() {
     auto yearMonthDay = date::year_month_day(dp);
 
     auto year = static_cast<int>(yearMonthDay.year());
-    auto Pinetime::Controllers::DateTime::Months currentMonth = Pinetime::Controllers::DateTime::Months::Unknown;
+    auto month = static_cast<Pinetime::Controllers::DateTime::Months>(static_cast<unsigned>(yearMonthDay.month()));
     auto day = static_cast<unsigned>(yearMonthDay.day());
     auto dayOfWeek = static_cast<Pinetime::Controllers::DateTime::Days>(date::weekday(yearMonthDay).iso_encoding());
 
