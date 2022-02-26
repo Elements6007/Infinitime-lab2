@@ -63,8 +63,8 @@ std::unique_ptr<Screen> SettingSetDate::CreateScreen1() {
   lv_label_set_align(lblDay, LV_LABEL_ALIGN_CENTER);
   lv_obj_align(lblDay, lv_scr_act(), LV_ALIGN_CENTER, POS_X_DAY, POS_Y_TEXT);
   lv_obj_set_auto_realign(lblDay, true);
-
-  monthValue = static_cast<uint8_t>(dateTimeController.Month());
+           
+  monthValue = Pinetime::Controllers::DateTime::Months::Unknown;
   lv_obj_t * lblMonth = lv_label_create(lv_scr_act(), nullptr);
   lv_label_set_text_fmt(lblMonth, "%d", monthValue);
   lv_label_set_align(lblMonth, LV_LABEL_ALIGN_CENTER);

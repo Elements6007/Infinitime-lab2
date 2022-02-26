@@ -21,7 +21,8 @@ namespace Pinetime {
           Controllers::DateTime& dateTimeController;
 
           int dayValue;
-          Pinetime::Controllers::DateTime::Months currentMonth = Pinetime::Controllers::DateTime::Months::Unknown;
+          Pinetime::Controllers::DateTime::Months monthvalue = Pinetime::Controllers::DateTime::Months::Unknown;
+          int monthValue;
           int yearValue;
           lv_obj_t * lblDay;
           lv_obj_t * lblMonth;
