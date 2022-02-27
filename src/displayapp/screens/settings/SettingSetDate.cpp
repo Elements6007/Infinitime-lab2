@@ -66,7 +66,7 @@ std::unique_ptr<Screen> SettingSetDate::CreateScreen1() {
            
   monthValue = static_cast<uint8_t>(dateTimeController.Month());
   lv_obj_t * lblMonth = lv_label_create(lv_scr_act(), nullptr);
-  lv_label_set_text_fmt(lblMonth, (dateTimeController.Month()), monthValue);
+  UpdateMonthLabel();
   lv_label_set_align(lblMonth, LV_LABEL_ALIGN_CENTER);
   lv_obj_align(lblMonth, lv_scr_act(), LV_ALIGN_CENTER, POS_X_MONTH, POS_Y_TEXT);
   lv_obj_set_auto_realign(lblMonth, true);
