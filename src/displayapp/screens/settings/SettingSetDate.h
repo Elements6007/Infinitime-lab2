@@ -38,10 +38,10 @@ namespace Pinetime {
           void CheckDay();
           void UpdateMonthLabel();
 
-          ScreenList<2> screens;
+          /*ScreenList<2> screens;
 
           std::unique_ptr<Screen> CreateScreen1();
-          std::unique_ptr<Screen> CreateScreen2();
+          std::unique_ptr<Screen> CreateScreen2();*/
       };
     }
   }
