@@ -42,7 +42,7 @@ namespace {
 
   monthValue = static_cast<int>(dateTimeController.Month());
   lblMonth = lv_label_create(lv_scr_act(), nullptr);
-  UpdateMonthLabel();
+  lv_label_set_text_fmt(lblDay, "%d", monthValue);
   lv_label_set_align(lblMonth, LV_LABEL_ALIGN_CENTER);
   lv_obj_align(lblMonth, lv_scr_act(), LV_ALIGN_CENTER, POS_X_MONTH, POS_Y_TEXT);
   lv_obj_set_auto_realign(lblMonth, true);
@@ -135,14 +135,14 @@ void SettingSetDate::HandleButtonPress(lv_obj_t *object, lv_event_t event) {
     monthValue++;
     if (monthValue > 12)
       monthValue = 1;
-    UpdateMonthLabel();
+    monthValue();
     lv_btn_set_state(btnSetTime, LV_BTN_STATE_RELEASED);
     CheckDay();
   } else if (object == btnMonthMinus) {
     monthValue--;
     if (monthValue < 1)
       monthValue = 12;
-    UpdateMonthLabel();
+    monthValue();
     lv_btn_set_state(btnSetTime, LV_BTN_STATE_RELEASED);
     CheckDay();
   } else if (object == btnYearPlus) {
