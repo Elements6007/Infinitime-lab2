@@ -21,13 +21,10 @@ namespace {
   }
 }
 
- 
 SettingSetDate::SettingSetDate(Pinetime::Applications::DisplayApp *app, Pinetime::Controllers::DateTime &dateTimeController) :
   Screen(app),
   dateTimeController {dateTimeController} {
- 
-
- lv_obj_t * title = lv_label_create(lv_scr_act(), nullptr);
+  lv_obj_t * title = lv_label_create(lv_scr_act(), nullptr);
   lv_label_set_text_static(title, "Set current date");
   lv_label_set_align(title, LV_LABEL_ALIGN_CENTER);
   lv_obj_align(title, lv_scr_act(), LV_ALIGN_IN_TOP_MID, 15, 15);
@@ -48,7 +45,7 @@ SettingSetDate::SettingSetDate(Pinetime::Applications::DisplayApp *app, Pinetime
 
   monthValue = static_cast<int>(dateTimeController.Month());
   lblMonth = lv_label_create(lv_scr_act(), nullptr);
-  lv_label_set_text_fmt(lblDay, "%d", monthValue);
+  UpdateMonthLabel();
   lv_label_set_align(lblMonth, LV_LABEL_ALIGN_CENTER);
   lv_obj_align(lblMonth, lv_scr_act(), LV_ALIGN_CENTER, POS_X_MONTH, POS_Y_TEXT);
   lv_obj_set_auto_realign(lblMonth, true);
@@ -110,8 +107,7 @@ SettingSetDate::SettingSetDate(Pinetime::Applications::DisplayApp *app, Pinetime
   lv_obj_align(btnSetTime, lv_scr_act(), LV_ALIGN_IN_BOTTOM_MID, 0, 0);
   lv_obj_set_style_local_value_str(btnSetTime, LV_BTN_PART_MAIN, LV_STATE_DEFAULT, "Set");
   lv_obj_set_event_cb(btnSetTime, event_handler);
-
-
+}
 
 SettingSetDate::~SettingSetDate() {
   lv_obj_clean(lv_scr_act());
@@ -137,14 +133,14 @@ void SettingSetDate::HandleButtonPress(lv_obj_t *object, lv_event_t event) {
     monthValue++;
     if (monthValue > 12)
       monthValue = 1;
-    monthValue();
+    UpdateMonthLabel();
     lv_btn_set_state(btnSetTime, LV_BTN_STATE_RELEASED);
     CheckDay();
   } else if (object == btnMonthMinus) {
     monthValue--;
     if (monthValue < 1)
       monthValue = 12;
-    monthValue();
+    UpdateMonthLabel();
     lv_btn_set_state(btnSetTime, LV_BTN_STATE_RELEASED);
     CheckDay();
   } else if (object == btnYearPlus) {
@@ -200,11 +196,6 @@ void SettingSetDate::UpdateMonthLabel() {
   lv_label_set_text_static(
     lblMonth, Pinetime::Controllers::DateTime::MonthShortToStringLow(static_cast<Pinetime::Controllers::DateTime::Months>(monthValue)));
 }
-
-}
-
-
-
 
 
 
