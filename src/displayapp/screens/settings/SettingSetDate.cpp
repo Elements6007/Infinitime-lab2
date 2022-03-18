@@ -21,9 +21,18 @@ namespace {
   }
 }
 
+<<<<<<< Updated upstream
 SettingSetDate::SettingSetDate(Pinetime::Applications::DisplayApp *app, Pinetime::Controllers::DateTime &dateTimeController) :
   Screen(app),
   dateTimeController {dateTimeController} {
+=======
+
+
+SettingSetDate::SettingSetDate(Pinetime::Applications::DisplayApp *app, Pinetime::Controllers::DateTime &dateTimeController) :
+  Screen(app),
+  dateTimeController {dateTimeController} {
+ 
+>>>>>>> Stashed changes
   lv_obj_t * title = lv_label_create(lv_scr_act(), nullptr);
   lv_label_set_text_static(title, "Set current date");
   lv_label_set_align(title, LV_LABEL_ALIGN_CENTER);
