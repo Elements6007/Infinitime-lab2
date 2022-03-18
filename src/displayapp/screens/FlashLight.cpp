@@ -18,7 +18,7 @@ FlashLight::FlashLight(Pinetime::Applications::DisplayApp* app,
                        Controllers::Settings& settingsController)
   : Screen(app),
     systemTask {systemTask},
-    brightnessController {brightnessController}
+    brightnessController {brightnessController},
     settingsController {settingsController}
 
 {
