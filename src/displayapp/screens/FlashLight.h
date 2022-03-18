@@ -34,6 +34,7 @@ namespace Pinetime {
 
         Pinetime::System::SystemTask& systemTask;
         Controllers::BrightnessController& brightnessController;
+        Controllers::Settings& settingsController;
 
         Controllers::BrightnessController::Levels brightnessLevel;
 
