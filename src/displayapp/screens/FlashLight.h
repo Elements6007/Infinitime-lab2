@@ -19,7 +19,6 @@ namespace Pinetime {
         bool OnTouchEvent(Pinetime::Applications::TouchEvents event) override;
         void OnClickEvent(lv_obj_t* obj, lv_event_t event);
 
-      private:
         enum class Levels { Off, Low, Medium, High };
         void Init();
 
@@ -29,8 +28,14 @@ namespace Pinetime {
         void Backup();
         void Restore();
 
+      private:
+        
+
         void SetIndicators();
         void SetColors();
+
+        Levels level = Levels::High;
+        Levels backupLevel = Levels::High;
 
         Pinetime::System::SystemTask& systemTask;
         Controllers::BrightnessController& brightnessController;
