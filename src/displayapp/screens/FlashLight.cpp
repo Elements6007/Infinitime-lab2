@@ -13,10 +13,12 @@ namespace {
 
 FlashLight::FlashLight(Pinetime::Applications::DisplayApp* app,
                        System::SystemTask& systemTask,
-                       Controllers::BrightnessController& brightnessController)
+                       Controllers::BrightnessController& brightnessController
+                       Pinetime::Controllers::Settings& settingsController)
   : Screen(app),
     systemTask {systemTask},
     brightnessController {brightnessController}
+    settingsController {settingsController}
 
 {
   brightnessController.Backup();
