@@ -1,6 +1,7 @@
 #include "displayapp/screens/FlashLight.h"
 #include "displayapp/DisplayApp.h"
 #include "displayapp/screens/Symbols.h"
+#include "components/settings/Settings.h"
 
 using namespace Pinetime::Applications::Screens;
 
@@ -14,7 +15,7 @@ namespace {
 FlashLight::FlashLight(Pinetime::Applications::DisplayApp* app,
                        System::SystemTask& systemTask,
                        Controllers::BrightnessController& brightnessController
-                       Pinetime::Controllers::Settings& settingsController)
+                       Controllers::Settings& settingsController)
   : Screen(app),
     systemTask {systemTask},
     brightnessController {brightnessController}
