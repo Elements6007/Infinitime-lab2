@@ -15,7 +15,7 @@ namespace {
 FlashLight::FlashLight(Pinetime::Applications::DisplayApp* app,
                        System::SystemTask& systemTask,
                        Controllers::BrightnessController& brightnessController
-                       Controllers::Settings& settingsController)
+                       Pinetime::Controllers::Settings& settingsController)
   : Screen(app),
     systemTask {systemTask},
     brightnessController {brightnessController}
