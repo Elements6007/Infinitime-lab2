@@ -20,8 +20,14 @@ namespace Pinetime {
         void OnClickEvent(lv_obj_t* obj, lv_event_t event);
 
       private:
-      void Set(Levels level);
-      Levels Level() const;
+        enum class Levels { Off, Low, Medium, High };
+        void Init();
+
+        void Set(Levels level);
+        Levels Level() const;
+
+        void Backup();
+        void Restore();
 
         void SetIndicators();
         void SetColors();
