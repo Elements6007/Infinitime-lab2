@@ -3,7 +3,6 @@
 #include <bitset>
 #include "components/datetime/DateTimeController.h"
 #include "components/brightness/BrightnessController.h"
-#include "screens/FlashLight.h"
 #include "components/fs/FS.h"
 
 namespace Pinetime {
