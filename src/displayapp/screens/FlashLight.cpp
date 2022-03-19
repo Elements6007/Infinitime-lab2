@@ -57,11 +57,11 @@ FlashLight::FlashLight(Pinetime::Applications::DisplayApp* app,
 }
 
 FlashLight::Levels FlashLight::Level() const {
-  return Level;
+  return level;
 }
 
 void FlashLight::Backup() {
-  backupLevel = Level;
+  backupLevel = level;
 }
 
 void FlashLight::Restore() {
