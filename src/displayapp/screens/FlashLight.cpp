@@ -22,7 +22,7 @@ FlashLight::FlashLight(Pinetime::Applications::DisplayApp* app,
     settingsController {settingsController}
 
 {
-  brightnessController.Backup();
+  /*brightnessController.Backup();*/
 
   /*brightnessLevel = brightnessController.Level();*/
 
