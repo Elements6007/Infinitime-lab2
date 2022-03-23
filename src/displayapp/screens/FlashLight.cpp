@@ -75,6 +75,7 @@ FlashLight::~FlashLight() {
   systemTask.PushMessage(Pinetime::System::Messages::EnableSleeping);
 }
 
+
 void FlashLight::SetColors() {
   if (isOn) {
     lv_obj_set_style_local_bg_color(lv_scr_act(), LV_OBJ_PART_MAIN, LV_STATE_DEFAULT, LV_COLOR_WHITE);
