@@ -176,10 +176,10 @@ namespace Pinetime {
       };
 
         void SetFlashLight(FlashLight FlashLight) {
-        if (chimeOption != settings.FlashLight) {
+        if (FlashLight != settings.FlashLight) {
           settingsChanged = true;
         }
-        settings.Flashlight = chimeOption;
+        settings.FlashLight = FlashLight;
       };
       FlashLight GetFlashLight() const {
         return settings.FlashLight;
