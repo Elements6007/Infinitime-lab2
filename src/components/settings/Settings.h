@@ -175,10 +175,10 @@ namespace Pinetime {
         return settings.brightLevel;
       };
 
-        void SetFlashLight(FlashLight FlashLight) {
-        if (Flashlight != settings.FlashLight) {
-          settingsChanged = true;
-        }
+      void SetFlashLight(FlashLight FlashLight) {
+      if (Flashlight != settings.FlashLight) {
+        settingsChanged = true;
+     }
         settings.FlashLight = FlashLight;
       };
       FlashLight GetFlashLight() const {
