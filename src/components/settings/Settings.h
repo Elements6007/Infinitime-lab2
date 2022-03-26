@@ -176,7 +176,7 @@ namespace Pinetime {
       };
 
       void SetFlashLight(FlashLight FlashLight) {
-      if (Flashlight != settings.FlashLight) {
+      if (FlashLight != settings.FlashLight) {
         settingsChanged = true;
      }
         settings.FlashLight = FlashLight;
