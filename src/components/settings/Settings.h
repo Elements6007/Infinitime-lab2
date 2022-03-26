@@ -215,6 +215,7 @@ namespace Pinetime {
         std::bitset<4> wakeUpMode {0};
         uint16_t shakeWakeThreshold = 150;
         Controllers::BrightnessController::Levels brightLevel = Controllers::BrightnessController::Levels::Medium;
+        Controllers::BrightnessController::Levels Flashlight = Controllers::BrightnessController::Levels::Medium;
       };
 
       SettingsData settings;
