@@ -160,10 +160,10 @@ void FlashLight::UpdateSelected(lv_obj_t* object, lv_event_t event) {
           settingsController.Flashlight(Controllers::Settings::Flashlight::Low);
         }
         if (i == 1) {
-          settingsController.Flashlight(Controllers::Settings::ChimesOption::Hours);
+          settingsController.Flashlight(Controllers::Settings::Flashlight::Medium);
         }
         if (i == 2) {
-          settingsController.Flashlight(Controllers::Settings::ChimesOption::HalfHours);
+          settingsController.Flashlight(Controllers::Settings::Flashlight::High);
         }
       } else {
         lv_checkbox_set_checked(cbOption[i], false);
