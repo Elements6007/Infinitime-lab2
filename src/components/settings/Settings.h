@@ -175,7 +175,7 @@ namespace Pinetime {
         return settings.brightLevel;
       };
 
-      void setFlashLight(Controllers::BrightnessController::Levels level) {
+      /*void setFlashLight(Controllers::BrightnessController::Levels level) {
         if (level != settings.Flashlight) {
           settingsChanged = true;
         }
@@ -184,7 +184,7 @@ namespace Pinetime {
       Controllers::BrightnessController::Levels setFlashLight() const {
         return settings.Flashlight;
       };
-
+*/
 
       void SetStepsGoal( uint32_t goal ) { 
         if ( goal != settings.stepsGoal ) {
