@@ -71,7 +71,9 @@ void FlashLight::Restore() {
 FlashLight::~FlashLight() {
   lv_obj_clean(lv_scr_act());
   lv_obj_set_style_local_bg_color(lv_scr_act(), LV_OBJ_PART_MAIN, LV_STATE_DEFAULT, LV_COLOR_BLACK);
-  brightnessController.Restore();
+
+  settingsController.SaveSettings();
+
   systemTask.PushMessage(Pinetime::System::Messages::EnableSleeping);
 }
 
