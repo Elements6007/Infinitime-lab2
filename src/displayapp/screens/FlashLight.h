@@ -3,6 +3,7 @@
 #include "displayapp/screens/Screen.h"
 #include "components/brightness/BrightnessController.h"
 #include "systemtask/SystemTask.h"
+#include "components/settings/Settings.h"
 #include <cstdint>
 #include <lvgl/lvgl.h>
 
