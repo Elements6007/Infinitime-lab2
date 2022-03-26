@@ -176,13 +176,13 @@ namespace Pinetime {
       };
 
       void setFlashLight(Controllers::BrightnessController::Levels level) {
-        if (level != settings.brightLevel) {
+        if (level != settings.Flashlight) {
           settingsChanged = true;
         }
-        settings.brightLevel = level;
+        settings.Flashlight = level;
       };
       Controllers::BrightnessController::Levels setFlashLight() const {
-        return settings.brightLevel;
+        return settings.Flashlight;
       };
 
 
