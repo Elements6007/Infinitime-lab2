@@ -24,7 +24,7 @@ FlashLight::FlashLight(Pinetime::Applications::DisplayApp* app,
 {
   brightnessController.Backup();
 
-  brightnessLevel = settingsController.Flashlight;
+  brightnessLevel = settingsController.FlashLight;
 
   flashLight = lv_label_create(lv_scr_act(), nullptr);
   lv_obj_set_style_local_text_font(flashLight, LV_LABEL_PART_MAIN, LV_STATE_DEFAULT, &lv_font_sys_48);
@@ -126,11 +126,11 @@ bool FlashLight::OnTouchEvent(Pinetime::Applications::TouchEvents event) {
   if (event == TouchEvents::SwipeLeft) {
     if (brightnessLevel == BrightnessController::Levels::High) {
       brightnessLevel = BrightnessController::Levels::Medium;
-      brightnessController.Set(settingsController.Flashlight);
+      brightnessController.Set(settingsController.FlashLight);
       SetIndicators();
     } else if (brightnessLevel == BrightnessController::Levels::Medium) {
       brightnessLevel = BrightnessController::Levels::Low;
-      brightnessController.Set(settingsController.Flashlight);
+      brightnessController.Set(settingsController.FlashLight);
       SetIndicators();
     }
     return true;
@@ -138,11 +138,11 @@ bool FlashLight::OnTouchEvent(Pinetime::Applications::TouchEvents event) {
   if (event == TouchEvents::SwipeRight) {
     if (brightnessLevel == BrightnessController::Levels::Low) {
       brightnessLevel = BrightnessController::Levels::Medium;
-      brightnessController.Set(settingsController.Flashlight);
+      brightnessController.Set(settingsController.FlashLight);
       SetIndicators();
     } else if (brightnessLevel == BrightnessController::Levels::Medium) {
       brightnessLevel = BrightnessController::Levels::High;
-      brightnessController.Set(settingsController.Flashlight);
+      brightnessController.Set(settingsController.FlashLight);
       SetIndicators();
     }
     return true;
