@@ -220,7 +220,7 @@ namespace Pinetime {
         uint8_t clockFace = 0;
         ChimesOption chimesOption = ChimesOption::None;
 
-        FlashLight Flashlight = Flashlight::None;
+        FlashLight FlashLight = FlashLight::None;
 
         PineTimeStyle PTS;
 
