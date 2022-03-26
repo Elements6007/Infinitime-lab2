@@ -187,11 +187,6 @@ void DisplayApp::Refresh() {
         PushMessageToSystemTask(Pinetime::System::Messages::OnDisplayTaskSleeping);
         state = States::Idle;
         break;
-      case Messages::Flashlight:
-        while (Flashlight.Level() != Controllers::BrightnessController::Levels::Off) {
-          Flashlight.Lower();
-          vTaskDelay(100);
-        }
       case Messages::GoToRunning:
         lcd.DisplayOn();
         brightnessController.Restore();
