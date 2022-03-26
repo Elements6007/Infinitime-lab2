@@ -148,3 +148,4 @@ bool FlashLight::OnTouchEvent(Pinetime::Applications::TouchEvents event) {
 
   return false;
 }
+
