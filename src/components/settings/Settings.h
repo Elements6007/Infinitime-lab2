@@ -175,14 +175,14 @@ namespace Pinetime {
         return settings.brightLevel;
       };
 
-        void SetFlashLight(FlashLight FlashLight) {
-        if (FlashLight != settings.FlashLight) {
+        void SetFlashLight(FlashLight Flashlight) {
+        if (Flashlight != settings.Flashlight) {
           settingsChanged = true;
         }
-        settings.FlashLight = FlashLight;
+        settings.Flashlight = Flashlight;
       };
       FlashLight GetFlashLight() const {
-        return settings.FlashLight;
+        return settings.Flashlight;
       };
 
       /*void setFlashLight(Controllers::BrightnessController::Levels level) {
@@ -219,6 +219,8 @@ namespace Pinetime {
 
         uint8_t clockFace = 0;
         ChimesOption chimesOption = ChimesOption::None;
+
+        FlashLight Flashlight = Flashlight::None;
 
         PineTimeStyle PTS;
 
