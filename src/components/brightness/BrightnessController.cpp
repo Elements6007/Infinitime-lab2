@@ -110,7 +110,7 @@ const char* BrightnessController::GetIcon() {
   return Applications::Screens::Symbols::brightnessLow;
 }
 
-const char* BrightnessController::ToString() {
+/*const char* BrightnessController::ToString() {
   switch (level) {
     case Levels::Off:
       return "Off";
@@ -123,4 +123,4 @@ const char* BrightnessController::ToString() {
     default:
       return "???";
   }
-}
+}*/
