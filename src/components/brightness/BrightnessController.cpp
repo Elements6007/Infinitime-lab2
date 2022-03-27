@@ -38,7 +38,7 @@ void BrightnessController::Set(BrightnessController::Levels level) {
   }
 }
 
-void BrightnessController::Lower() {
+/*void BrightnessController::Lower() {
   switch (level) {
     case Levels::High:
       Set(Levels::Medium);
@@ -68,7 +68,7 @@ void BrightnessController::Higher() {
     default:
       break;
   }
-}
+}*/
 
 BrightnessController::Levels BrightnessController::Level() const {
   return level;
@@ -110,7 +110,7 @@ const char* BrightnessController::GetIcon() {
   return Applications::Screens::Symbols::brightnessLow;
 }
 
-/*const char* BrightnessController::ToString() {
+const char* BrightnessController::ToString() {
   switch (level) {
     case Levels::Off:
       return "Off";
@@ -123,4 +123,4 @@ const char* BrightnessController::GetIcon() {
     default:
       return "???";
   }
-}*/
+}
