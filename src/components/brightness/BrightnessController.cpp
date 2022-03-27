@@ -38,7 +38,7 @@ void BrightnessController::Set(BrightnessController::Levels level) {
   }
 }
 
-/*void BrightnessController::Lower() {
+void BrightnessController::Lower() {
   switch (level) {
     case Levels::High:
       Set(Levels::Medium);
@@ -54,7 +54,7 @@ void BrightnessController::Set(BrightnessController::Levels level) {
   }
 }
 
-void BrightnessController::Higher() {
+/*void BrightnessController::Higher() {
   switch (level) {
     case Levels::Off:
       Set(Levels::Low);
