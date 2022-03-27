@@ -24,7 +24,7 @@ FlashLight::FlashLight(Pinetime::Applications::DisplayApp* app,
 {
   brightnessController.Backup();
 
-  brightnessLevel = settingsController.FlashLight;
+  brightnessLevel = brightnessController.Level();
 
   flashLight = lv_label_create(lv_scr_act(), nullptr);
   lv_obj_set_style_local_text_font(flashLight, LV_LABEL_PART_MAIN, LV_STATE_DEFAULT, &lv_font_sys_48);
@@ -56,27 +56,12 @@ FlashLight::FlashLight(Pinetime::Applications::DisplayApp* app,
   systemTask.PushMessage(Pinetime::System::Messages::DisableSleeping);
 }
 
-FlashLight::Levels FlashLight::Level() const {
-  return level;
-}
-
-void FlashLight::Backup() {
-  backupLevel = level;
-}
-
-void FlashLight::Restore() {
-  Set(backupLevel);
-}
-
 FlashLight::~FlashLight() {
   lv_obj_clean(lv_scr_act());
   lv_obj_set_style_local_bg_color(lv_scr_act(), LV_OBJ_PART_MAIN, LV_STATE_DEFAULT, LV_COLOR_BLACK);
-
-  settingsController.SaveSettings();
-
+  brightnessController.Restore();
   systemTask.PushMessage(Pinetime::System::Messages::EnableSleeping);
 }
-
 
 void FlashLight::SetColors() {
   if (isOn) {
@@ -126,11 +111,11 @@ bool FlashLight::OnTouchEvent(Pinetime::Applications::TouchEvents event) {
   if (event == TouchEvents::SwipeLeft) {
     if (brightnessLevel == BrightnessController::Levels::High) {
       brightnessLevel = BrightnessController::Levels::Medium;
-      settingsController.Flashlight(Controllers::Settings::Flashlight::Low);
+      brightnessController.Set(brightnessLevel);
       SetIndicators();
     } else if (brightnessLevel == BrightnessController::Levels::Medium) {
       brightnessLevel = BrightnessController::Levels::Low;
-      settingsController.Flashlight(Controllers::Settings::Flashlight::Low);
+      brightnessController.Set(brightnessLevel);
       SetIndicators();
     }
     return true;
@@ -138,11 +123,11 @@ bool FlashLight::OnTouchEvent(Pinetime::Applications::TouchEvents event) {
   if (event == TouchEvents::SwipeRight) {
     if (brightnessLevel == BrightnessController::Levels::Low) {
       brightnessLevel = BrightnessController::Levels::Medium;
-      settingsController.Flashlight(Controllers::Settings::Flashlight::Low);
+      brightnessController.Set(brightnessLevel);
       SetIndicators();
     } else if (brightnessLevel == BrightnessController::Levels::Medium) {
       brightnessLevel = BrightnessController::Levels::High;
-      settingsController.Flashlight(Controllers::Settings::Flashlight::Low);
+      brightnessController.Set(brightnessLevel);
       SetIndicators();
     }
     return true;
@@ -150,26 +135,3 @@ bool FlashLight::OnTouchEvent(Pinetime::Applications::TouchEvents event) {
 
   return false;
 }
-
-void FlashLight {
-  if (event == LV_EVENT_VALUE_CHANGED) {
-    for (uint8_t i = 0; i < optionsTotal; i++) {
-      if (object == cbOption[i]) {
-        lv_checkbox_set_checked(cbOption[i], true);
-        if (i == 0) {
-          settingsController.Flashlight(Controllers::Settings::Flashlight::Low);
-        }
-        if (i == 1) {
-          settingsController.Flashlight(Controllers::Settings::Flashlight::Medium);
-        }
-        if (i == 2) {
-          settingsController.Flashlight(Controllers::Settings::Flashlight::High);
-        }
-      } else {
-        lv_checkbox_set_checked(cbOption[i], false);
-      }
-    }
-  }
-}
-
-
