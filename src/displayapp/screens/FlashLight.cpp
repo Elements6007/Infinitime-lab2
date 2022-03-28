@@ -113,11 +113,11 @@ bool FlashLight::OnTouchEvent(Pinetime::Applications::TouchEvents event) {
     if (brightnessLevel == BrightnessController::Levels::High) {
       brightnessLevel = BrightnessController::Levels::Medium;
       brightnessController.Set(brightnessLevel);
-      settingsController.SetFlashLight(BrightnessController::Levels::Medium);
+      settingsController.SetFlashLight(Controllers::Settings::FlashLight::Medium);
       SetIndicators();
     } else if (brightnessLevel == BrightnessController::Levels::Medium) {
       brightnessLevel = BrightnessController::Levels::Low;
-      settingsController.SetFlashLight(BrightnessController::Levels::Low);
+      settingsController.SetFlashLight(Controllers::Settings::FlashLight::Low);
       brightnessController.Set(brightnessLevel);
       SetIndicators();
     }
@@ -127,12 +127,12 @@ bool FlashLight::OnTouchEvent(Pinetime::Applications::TouchEvents event) {
     if (brightnessLevel == BrightnessController::Levels::Low) {
       brightnessLevel = BrightnessController::Levels::Medium;
       brightnessController.Set(brightnessLevel);
-      settingsController.SetFlashLight(BrightnessController::Levels::Medium);
+      settingsController.SetFlashLight(Controllers::Settings::FlashLight::Medium);
       SetIndicators();
     } else if (brightnessLevel == BrightnessController::Levels::Medium) {
       brightnessLevel = BrightnessController::Levels::High;
       brightnessController.Set(brightnessLevel);
-      settingsController.SetFlashLight(BrightnessController::Levels::High);
+      settingsController.SetFlashLight(Controllers::Settings::FlashLight::High);
       SetIndicators();
     }
     return true;
