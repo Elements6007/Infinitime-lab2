@@ -113,13 +113,13 @@ bool FlashLight::OnTouchEvent(Pinetime::Applications::TouchEvents event) {
     if (brightnessLevel == BrightnessController::Levels::High) {
       brightnessLevel = BrightnessController::Levels::Medium;
       brightnessController.Set(brightnessLevel);
-      settingsController.SetFlashLight(Controllers::Settings::FlashLight::Medium);
       SetIndicators();
+      settingsController.SetFlashLight(Controllers::Settings::FlashLight::Medium);
     } else if (brightnessLevel == BrightnessController::Levels::Medium) {
       brightnessLevel = BrightnessController::Levels::Low;
-      settingsController.SetFlashLight(Controllers::Settings::FlashLight::Low);
       brightnessController.Set(brightnessLevel);
       SetIndicators();
+      settingsController.SetFlashLight(Controllers::Settings::FlashLight::Low);
     }
     return true;
   }
@@ -127,13 +127,13 @@ bool FlashLight::OnTouchEvent(Pinetime::Applications::TouchEvents event) {
     if (brightnessLevel == BrightnessController::Levels::Low) {
       brightnessLevel = BrightnessController::Levels::Medium;
       brightnessController.Set(brightnessLevel);
-      settingsController.SetFlashLight(Controllers::Settings::FlashLight::Medium);
       SetIndicators();
+      settingsController.SetFlashLight(Controllers::Settings::FlashLight::Medium);
     } else if (brightnessLevel == BrightnessController::Levels::Medium) {
       brightnessLevel = BrightnessController::Levels::High;
       brightnessController.Set(brightnessLevel);
-      settingsController.SetFlashLight(Controllers::Settings::FlashLight::High);
       SetIndicators();
+      settingsController.SetFlashLight(Controllers::Settings::FlashLight::High);
     }
     return true;
   }
@@ -141,3 +141,22 @@ bool FlashLight::OnTouchEvent(Pinetime::Applications::TouchEvents event) {
 
   return false;
 }
+
+/*void FlashLight::Set(FlashLight::Levels level) {
+  this->level = level;
+  switch (level) {
+    default:
+    case Levels::High:
+      
+      break;
+    case Levels::Medium:
+      
+      break;
+    case Levels::Low:
+      
+      break;
+    case Levels::Off:
+   
+      break;
+  }
+}*/
