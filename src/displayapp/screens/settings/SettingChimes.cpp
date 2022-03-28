@@ -56,9 +56,6 @@ SettingChimes::SettingChimes(Pinetime::Applications::DisplayApp* app, Pinetime::
   cbOption[optionsTotal]->user_data = this;
   lv_obj_set_event_cb(cbOption[optionsTotal], event_handler);
   SetRadioButtonStyle(cbOption[optionsTotal]);
-  if (settingsController.GetChimeOption() == Controllers::Settings::ChimesOption::Hours) {
-    lv_checkbox_set_checked(cbOption[optionsTotal], true);
-  }
 
   optionsTotal++;
   cbOption[optionsTotal] = lv_checkbox_create(container1, nullptr);
