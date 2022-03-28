@@ -24,7 +24,7 @@ FlashLight::FlashLight(Pinetime::Applications::DisplayApp* app,
 {
   brightnessController.Backup();
 
-  brightnessLevel = settingsController.GetFlashLight();
+  brightnessLevel = settingsController.GetFlashLight(Controllers::Settings::FlashLight);
 
   flashLight = lv_label_create(lv_scr_act(), nullptr);
   lv_obj_set_style_local_text_font(flashLight, LV_LABEL_PART_MAIN, LV_STATE_DEFAULT, &lv_font_sys_48);
