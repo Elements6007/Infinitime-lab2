@@ -35,7 +35,7 @@ namespace Pinetime {
 
         void SetIndicators();
         void SetColors();
-        void BrightnessSave();
+       
 
         Levels level = Levels::High;
         Levels backupLevel = Levels::High;
