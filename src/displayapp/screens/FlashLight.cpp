@@ -109,7 +109,7 @@ void FlashLight::OnClickEvent(lv_obj_t* obj, lv_event_t event) {
 bool FlashLight::OnTouchEvent(Pinetime::Applications::TouchEvents event) {
   using namespace Pinetime::Controllers;
 
-  this->level = level;
+  /*this->level = level;*/
 
   if (event == TouchEvents::SwipeLeft) {
     if (brightnessLevel == BrightnessController::Levels::High) {
