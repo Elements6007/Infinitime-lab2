@@ -144,7 +144,7 @@ bool FlashLight::OnTouchEvent(Pinetime::Applications::TouchEvents event) {
   return false;
 }
 
-void 
+
 /*void FlashLight::Set(FlashLight::Levels level) {
   this->level = level;
   switch (level) {
