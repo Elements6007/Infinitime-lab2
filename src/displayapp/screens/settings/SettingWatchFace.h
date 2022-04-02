@@ -20,8 +20,8 @@ namespace Pinetime {
         void UpdateSelected(lv_obj_t* object, lv_event_t event);
 
       private:
-        static constexpr std::array<const char*, 5> options = {" Digital face", " Analog face", " PineTimeStyle", "Terminal face", " Simpe face"};
-        Controllers::Settings& settingsController; 
+        static constexpr std::array<const char*, 4> options = {" Digital face", " Analog face", " PineTimeStyle", " Terminal", "SimpleFace"};
+        Controllers::Settings& settingsController;
 
         lv_obj_t* cbOption[options.size()];
 

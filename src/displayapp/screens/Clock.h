@@ -48,7 +48,6 @@ namespace Pinetime {
         std::unique_ptr<Screen> WatchFaceAnalogScreen();
         std::unique_ptr<Screen> PineTimeStyleScreen();
         std::unique_ptr<Screen> WatchFaceTerminalScreen();
-        std::unique_ptr<Screen> WatchFaceSimpleScreen();
       };
     }
   }
