@@ -38,12 +38,8 @@ namespace Pinetime {
       SettingSetTime,
       SettingChimes,
       SettingShakeThreshold,
-<<<<<<< HEAD
       pagetest,
       SettingBluetooth,
-=======
-      SettingAirplaneMode,
->>>>>>> parent of 7836554 (Replace airplane mode with a bluetooth toggle)
       Error
     };
   }
