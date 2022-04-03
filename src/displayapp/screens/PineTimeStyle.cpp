@@ -342,11 +342,14 @@ void PineTimeStyle::SetBatteryIcon() {
   lv_label_set_text(batteryIcon, BatteryIcon::GetBatteryIcon(batteryPercent));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
    if (batteryPercent == 100) {
       lv_obj_set_style_local_text_color(batteryIcon, LV_LABEL_PART_MAIN, LV_STATE_DEFAULT, LV_COLOR_GREEN);
     } else {
       lv_obj_set_style_local_text_color(batteryIcon, LV_LABEL_PART_MAIN, LV_STATE_DEFAULT, LV_COLOR_WHITE);
     }
+=======
+>>>>>>> parent of 187ea0f (Merge branch 'develop' of JF/PineTime into master)
 =======
 >>>>>>> parent of 187ea0f (Merge branch 'develop' of JF/PineTime into master)
 =======
@@ -409,6 +412,7 @@ void PineTimeStyle::Refresh() {
     auto minute = time.minutes().count();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> parent of 187ea0f (Merge branch 'develop' of JF/PineTime into master)
 
@@ -444,6 +448,32 @@ void PineTimeStyle::Refresh() {
       sprintf(hoursChar, "%02d", hour);
     }
 
+=======
+
+    char minutesChar[3];
+    sprintf(minutesChar, "%02d", static_cast<int>(minute));
+
+    char hoursChar[3];
+    char ampmChar[5];
+    if (settingsController.GetClockType() == Controllers::Settings::ClockType::H24) {
+      sprintf(hoursChar, "%02d", hour);
+    } else {
+      if (hour == 0 && hour != 12) {
+        hour = 12;
+        sprintf(ampmChar, "A\nM");
+      } else if (hour == 12 && hour != 0) {
+        hour = 12;
+        sprintf(ampmChar, "P\nM");
+      } else if (hour < 12 && hour != 0) {
+        sprintf(ampmChar, "A\nM");
+      } else if (hour > 12 && hour != 0) {
+        hour = hour - 12;
+        sprintf(ampmChar, "P\nM");
+      }
+      sprintf(hoursChar, "%02d", hour);
+    }
+
+>>>>>>> parent of 187ea0f (Merge branch 'develop' of JF/PineTime into master)
     if (hoursChar[0] != displayedChar[0] or hoursChar[1] != displayedChar[1] or minutesChar[0] != displayedChar[2] or
         minutesChar[1] != displayedChar[3]) {
       displayedChar[0] = hoursChar[0];

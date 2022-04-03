@@ -46,12 +46,15 @@ Clock::Clock(DisplayApp* app,
           break;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         case 3:
           return WatchFaceTerminalScreen();
           break;
         case 4:
           return WatchFaceSimpleScreen();
           break;
+=======
+>>>>>>> parent of 187ea0f (Merge branch 'develop' of JF/PineTime into master)
 =======
 >>>>>>> parent of 187ea0f (Merge branch 'develop' of JF/PineTime into master)
 =======
@@ -100,6 +103,7 @@ std::unique_ptr<Screen> Clock::PineTimeStyleScreen() {
                                                      motionController);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
 std::unique_ptr<Screen> Clock::WatchFaceTerminalScreen() {
@@ -116,6 +120,8 @@ std::unique_ptr<Screen> Clock::WatchFaceTerminalScreen() {
 std::unique_ptr<Screen> Clock::WatchFaceSimpleScreen() {
   return std::make_unique<Screens::WatchFaceSimple>(
     app, dateTimeController, settingsController);
+=======
+>>>>>>> parent of 187ea0f (Merge branch 'develop' of JF/PineTime into master)
 =======
 >>>>>>> parent of 187ea0f (Merge branch 'develop' of JF/PineTime into master)
 =======

@@ -40,7 +40,10 @@ namespace Pinetime {
       SettingShakeThreshold,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       pagetest,
+=======
+>>>>>>> parent of 187ea0f (Merge branch 'develop' of JF/PineTime into master)
 =======
 >>>>>>> parent of 187ea0f (Merge branch 'develop' of JF/PineTime into master)
 =======

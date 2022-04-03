@@ -383,9 +383,12 @@ void DisplayApp::LoadApp(Apps app, DisplayApp::FullRefreshDirections direction) 
       currentScreen = std::make_unique<Screens::Alarm>(this, alarmController);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       break; 
      case Apps::pagetest:
       currentScreen = std::make_unique<Screens::pagetest>(this);
+=======
+>>>>>>> parent of 187ea0f (Merge branch 'develop' of JF/PineTime into master)
 =======
 >>>>>>> parent of 187ea0f (Merge branch 'develop' of JF/PineTime into master)
 =======
@@ -437,7 +440,11 @@ void DisplayApp::LoadApp(Apps app, DisplayApp::FullRefreshDirections direction) 
     case Apps::SettingShakeThreshold:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       currentScreen = std::make_unique<Screens::SettingShakeThreshold>(this, settingsController, motionController, *systemTask);
+=======
+      currentScreen = std::make_unique<Screens::SettingShakeThreshold>(this, settingsController,motionController,*systemTask);
+>>>>>>> parent of 187ea0f (Merge branch 'develop' of JF/PineTime into master)
 =======
       currentScreen = std::make_unique<Screens::SettingShakeThreshold>(this, settingsController,motionController,*systemTask);
 >>>>>>> parent of 187ea0f (Merge branch 'develop' of JF/PineTime into master)
