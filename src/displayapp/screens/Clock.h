@@ -47,8 +47,11 @@ namespace Pinetime {
         std::unique_ptr<Screen> WatchFaceDigitalScreen();
         std::unique_ptr<Screen> WatchFaceAnalogScreen();
         std::unique_ptr<Screen> PineTimeStyleScreen();
+<<<<<<< HEAD
         std::unique_ptr<Screen> WatchFaceTerminalScreen();
         std::unique_ptr<Screen> WatchFaceSimpleScreen();
+=======
+>>>>>>> parent of 187ea0f (Merge branch 'develop' of JF/PineTime into master)
       };
     }
   }

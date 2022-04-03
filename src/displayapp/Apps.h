@@ -38,7 +38,10 @@ namespace Pinetime {
       SettingSetTime,
       SettingChimes,
       SettingShakeThreshold,
+<<<<<<< HEAD
       pagetest,
+=======
+>>>>>>> parent of 187ea0f (Merge branch 'develop' of JF/PineTime into master)
       Error
     };
   }

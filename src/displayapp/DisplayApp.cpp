@@ -381,9 +381,12 @@ void DisplayApp::LoadApp(Apps app, DisplayApp::FullRefreshDirections direction) 
       break;
     case Apps::Alarm:
       currentScreen = std::make_unique<Screens::Alarm>(this, alarmController);
+<<<<<<< HEAD
       break; 
      case Apps::pagetest:
       currentScreen = std::make_unique<Screens::pagetest>(this);
+=======
+>>>>>>> parent of 187ea0f (Merge branch 'develop' of JF/PineTime into master)
       break;
 
     // Settings
@@ -429,7 +432,11 @@ void DisplayApp::LoadApp(Apps app, DisplayApp::FullRefreshDirections direction) 
       ReturnApp(Apps::Settings, FullRefreshDirections::Down, TouchEvents::SwipeDown);
       break;
     case Apps::SettingShakeThreshold:
+<<<<<<< HEAD
       currentScreen = std::make_unique<Screens::SettingShakeThreshold>(this, settingsController, motionController, *systemTask);
+=======
+      currentScreen = std::make_unique<Screens::SettingShakeThreshold>(this, settingsController,motionController,*systemTask);
+>>>>>>> parent of 187ea0f (Merge branch 'develop' of JF/PineTime into master)
       ReturnApp(Apps::Settings, FullRefreshDirections::Down, TouchEvents::SwipeDown);
       break;
     case Apps::BatteryInfo:
