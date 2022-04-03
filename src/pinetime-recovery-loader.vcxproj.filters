@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\FreeRTOS\port.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\FreeRTOS\port_cmsis_systick.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\FreeRTOS\port_cmsis.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\drivers\SpiNorFlash.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\drivers\SpiMaster.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\drivers\Spi.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\logging\NrfLogger.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\components\rle\RleDecoder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\components\gfx\Gfx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\drivers\St7789.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\components\brightness\BrightnessController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\recoveryLoader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\pmister\source\repos\InfiniTime\src\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{F6C88CC1-B7EC-390D-B3D8-D80989C58291}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

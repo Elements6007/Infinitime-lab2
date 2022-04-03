@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\compile_assets\nRF5_SDK_15.3.0_59ac345\modules\nrfx\mdk\system_nrf52.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\compile_assets\nRF5_SDK_15.3.0_59ac345\components\boards\boards.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\compile_assets\nRF5_SDK_15.3.0_59ac345\integration\nrfx\legacy\nrf_drv_clock.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\compile_assets\nRF5_SDK_15.3.0_59ac345\modules\nrfx\drivers\src\nrfx_clock.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\compile_assets\nRF5_SDK_15.3.0_59ac345\modules\nrfx\drivers\src\nrfx_gpiote.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\compile_assets\nRF5_SDK_15.3.0_59ac345\modules\nrfx\soc\nrfx_atomic.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\compile_assets\nRF5_SDK_15.3.0_59ac345\modules\nrfx\drivers\src\nrfx_saadc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\compile_assets\nRF5_SDK_15.3.0_59ac345\external\freertos\source\croutine.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\compile_assets\nRF5_SDK_15.3.0_59ac345\external\freertos\source\event_groups.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\compile_assets\nRF5_SDK_15.3.0_59ac345\external\freertos\source\portable\MemMang\heap_4.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\compile_assets\nRF5_SDK_15.3.0_59ac345\external\freertos\source\list.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\compile_assets\nRF5_SDK_15.3.0_59ac345\external\freertos\source\queue.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\compile_assets\nRF5_SDK_15.3.0_59ac345\external\freertos\source\stream_buffer.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\compile_assets\nRF5_SDK_15.3.0_59ac345\external\freertos\source\tasks.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\compile_assets\nRF5_SDK_15.3.0_59ac345\external\freertos\source\timers.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\compile_assets\nRF5_SDK_15.3.0_59ac345\components\libraries\timer\app_timer_freertos.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\compile_assets\nRF5_SDK_15.3.0_59ac345\components\libraries\atomic\nrf_atomic.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\compile_assets\nRF5_SDK_15.3.0_59ac345\components\libraries\balloc\nrf_balloc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\compile_assets\nRF5_SDK_15.3.0_59ac345\components\libraries\util\nrf_assert.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\compile_assets\nRF5_SDK_15.3.0_59ac345\components\libraries\util\app_error.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\compile_assets\nRF5_SDK_15.3.0_59ac345\components\libraries\util\app_error_weak.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\compile_assets\nRF5_SDK_15.3.0_59ac345\components\libraries\util\app_error_handler_gcc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\compile_assets\nRF5_SDK_15.3.0_59ac345\components\libraries\util\app_util_platform.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\compile_assets\nRF5_SDK_15.3.0_59ac345\components\libraries\log\src\nrf_log_backend_rtt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\compile_assets\nRF5_SDK_15.3.0_59ac345\components\libraries\log\src\nrf_log_backend_serial.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\compile_assets\nRF5_SDK_15.3.0_59ac345\components\libraries\log\src\nrf_log_default_backends.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\compile_assets\nRF5_SDK_15.3.0_59ac345\components\libraries\log\src\nrf_log_frontend.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\compile_assets\nRF5_SDK_15.3.0_59ac345\components\libraries\log\src\nrf_log_str_formatter.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\compile_assets\nRF5_SDK_15.3.0_59ac345\components\libraries\memobj\nrf_memobj.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\compile_assets\nRF5_SDK_15.3.0_59ac345\components\libraries\ringbuf\nrf_ringbuf.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\compile_assets\nRF5_SDK_15.3.0_59ac345\components\libraries\strerror\nrf_strerror.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\compile_assets\nRF5_SDK_15.3.0_59ac345\external\segger_rtt\SEGGER_RTT_Syscalls_GCC.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\compile_assets\nRF5_SDK_15.3.0_59ac345\external\segger_rtt\SEGGER_RTT.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\compile_assets\nRF5_SDK_15.3.0_59ac345\external\segger_rtt\SEGGER_RTT_printf.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\compile_assets\nRF5_SDK_15.3.0_59ac345\external\utf_converter\utf.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\compile_assets\nRF5_SDK_15.3.0_59ac345\external\fprintf\nrf_fprintf.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\compile_assets\nRF5_SDK_15.3.0_59ac345\external\fprintf\nrf_fprintf_format.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\compile_assets\nRF5_SDK_15.3.0_59ac345\modules\nrfx\drivers\src\nrfx_twim.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\compile_assets\nRF5_SDK_15.3.0_59ac345\components\libraries\gpiote\app_gpiote.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\compile_assets\nRF5_SDK_15.3.0_59ac345\integration\nrfx\legacy\nrf_drv_clock.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\compile_assets\nRF5_SDK_15.3.0_59ac345\components\libraries\timer\app_timer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\pmister\source\repos\InfiniTime\src\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\compile_assets\nRF5_SDK_15.3.0_59ac345\modules\nrfx\mdk\gcc_startup_nrf52.S" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{D6E24B91-802A-3664-AF0F-779B84BD8006}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{F6C88CC1-B7EC-390D-B3D8-D80989C58291}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

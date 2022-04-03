@@ -1,0 +1,355 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\BootloaderVersion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\logging\NrfLogger.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\displayapp\DisplayApp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\displayapp\screens\Screen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\displayapp\screens\Clock.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\displayapp\screens\Tile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\displayapp\screens\Meter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\displayapp\screens\InfiniPaint.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\displayapp\screens\Paddle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\displayapp\screens\StopWatch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\displayapp\screens\BatteryIcon.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\displayapp\screens\BleIcon.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\displayapp\screens\NotificationIcon.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\displayapp\screens\Brightness.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\displayapp\screens\SystemInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\displayapp\screens\Label.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\displayapp\screens\FirmwareUpdate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\displayapp\screens\Music.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\displayapp\screens\Weather.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\displayapp\screens\Navigation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\displayapp\screens\Metronome.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\displayapp\screens\Motion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\displayapp\screens\FirmwareValidation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\displayapp\screens\ApplicationList.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\displayapp\screens\Notifications.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\displayapp\screens\Twos.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\displayapp\screens\HeartRate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\displayapp\screens\FlashLight.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\displayapp\screens\List.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\displayapp\screens\BatteryInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\displayapp\screens\Steps.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\displayapp\screens\Timer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\displayapp\screens\PassKey.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\displayapp\screens\Error.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\displayapp\screens\Alarm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\displayapp\screens\Styles.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\displayapp\Colors.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\displayapp\screens\settings\QuickSettings.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\displayapp\screens\settings\Settings.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\displayapp\screens\settings\SettingWatchFace.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\displayapp\screens\settings\SettingTimeFormat.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\displayapp\screens\settings\SettingWakeUp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\displayapp\screens\settings\SettingDisplay.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\displayapp\screens\settings\SettingSteps.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\displayapp\screens\settings\SettingSetDate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\displayapp\screens\settings\SettingSetTime.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\displayapp\screens\settings\SettingChimes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\displayapp\screens\settings\SettingShakeThreshold.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\displayapp\icons\bg_clock.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\displayapp\screens\WatchFaceAnalog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\displayapp\screens\WatchFaceDigital.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\displayapp\screens\PineTimeStyle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\drivers\St7789.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\drivers\SpiNorFlash.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\drivers\SpiMaster.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\drivers\Spi.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\drivers\Watchdog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\drivers\DebugPins.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\drivers\InternalFlash.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\drivers\Hrs3300.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\drivers\Bma421.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\drivers\Bma421_C\bma4.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\drivers\Bma421_C\bma423.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\components\battery\BatteryController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\components\ble\BleController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\components\ble\NotificationManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\components\datetime\DateTimeController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\components\brightness\BrightnessController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\components\motion\MotionController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\components\ble\NimbleController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\components\ble\DeviceInformationService.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\components\ble\CurrentTimeClient.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\components\ble\AlertNotificationClient.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\components\ble\DfuService.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\components\ble\CurrentTimeService.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\components\ble\AlertNotificationService.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\components\ble\MusicService.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\components\ble\weather\WeatherService.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\components\ble\NavigationService.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\displayapp\fonts\lv_font_navi_80.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\components\ble\BatteryInformationService.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\components\ble\FSService.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\components\ble\ImmediateAlertService.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\components\ble\ServiceDiscovery.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\components\ble\HeartRateService.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\components\ble\MotionService.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\components\firmwarevalidator\FirmwareValidator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\components\motor\MotorController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\components\settings\Settings.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\components\timer\TimerController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\components\alarm\AlarmController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\components\fs\FS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\drivers\Cst816s.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\FreeRTOS\port.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\FreeRTOS\port_cmsis_systick.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\FreeRTOS\port_cmsis.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\displayapp\LittleVgl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\displayapp\fonts\jetbrains_mono_extrabold_compressed.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\displayapp\fonts\jetbrains_mono_bold_20.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\displayapp\fonts\jetbrains_mono_76.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\displayapp\fonts\jetbrains_mono_42.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\displayapp\fonts\lv_font_sys_48.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\displayapp\fonts\open_sans_light.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\displayapp\lv_pinetime_theme.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\systemtask\SystemTask.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\drivers\TwiMaster.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\heartratetask\HeartRateTask.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\components\heartrate\Ppg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\components\heartrate\Biquad.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\components\heartrate\Ptagc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\components\heartrate\HeartRateController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\buttonhandler\ButtonHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\touchhandler\TouchHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\pmister\source\repos\InfiniTime\src\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{F6C88CC1-B7EC-390D-B3D8-D80989C58291}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

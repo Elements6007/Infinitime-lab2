@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\pmister\source\repos\InfiniTime\CMakeFiles\2dd0157d7cefffba5d7591d62754c020\FLASH_pinetime-app.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\pmister\source\repos\InfiniTime\src\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\pmister\source\repos\InfiniTime\src\CMakeFiles\FLASH_pinetime-app" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{FA150A07-D4F8-33A5-9D48-7037ED451787}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

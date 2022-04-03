@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\libs\mynewt-nimble\porting\npl\freertos\src\nimble_port_freertos.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\libs\mynewt-nimble\porting\npl\freertos\src\npl_os_freertos.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\libs\mynewt-nimble\nimble\host\src\ble_hs.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\libs\mynewt-nimble\nimble\host\src\ble_hs_hci_evt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\libs\mynewt-nimble\nimble\host\src\ble_l2cap_sig_cmd.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\libs\mynewt-nimble\nimble\host\src\ble_l2cap_sig.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\libs\mynewt-nimble\nimble\host\src\ble_l2cap.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\libs\mynewt-nimble\nimble\host\src\ble_hs_mbuf.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\libs\mynewt-nimble\nimble\host\src\ble_sm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\libs\mynewt-nimble\nimble\host\src\ble_sm_cmd.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\libs\mynewt-nimble\nimble\host\src\ble_sm_lgcy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\libs\mynewt-nimble\nimble\host\src\ble_sm_alg.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\libs\mynewt-nimble\nimble\host\src\ble_sm_sc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\libs\mynewt-nimble\nimble\host\src\ble_gap.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\libs\mynewt-nimble\nimble\host\src\ble_gatts.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\libs\mynewt-nimble\nimble\host\src\ble_gattc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\libs\mynewt-nimble\nimble\host\src\ble_hs_conn.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\libs\mynewt-nimble\nimble\host\src\ble_att_svr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\libs\mynewt-nimble\nimble\host\src\ble_store.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\libs\mynewt-nimble\nimble\host\src\ble_store_util.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\libs\mynewt-nimble\nimble\host\src\ble_hs_pvcy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\libs\mynewt-nimble\nimble\host\src\ble_hs_hci.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\libs\mynewt-nimble\nimble\host\src\ble_hs_log.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\libs\mynewt-nimble\nimble\host\src\ble_hs_hci_util.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\libs\mynewt-nimble\nimble\host\src\ble_hs_hci_cmd.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\libs\mynewt-nimble\nimble\host\src\ble_hs_cfg.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\libs\mynewt-nimble\nimble\host\src\ble_uuid.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\libs\mynewt-nimble\nimble\host\src\ble_hs_id.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\libs\mynewt-nimble\nimble\host\src\ble_hs_misc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\libs\mynewt-nimble\nimble\host\src\ble_att.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\libs\mynewt-nimble\nimble\host\src\ble_att_clt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\libs\mynewt-nimble\nimble\host\src\ble_att_cmd.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\libs\mynewt-nimble\nimble\host\src\ble_hs_atomic.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\libs\mynewt-nimble\nimble\host\src\ble_hs_adv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\libs\mynewt-nimble\nimble\host\src\ble_hs_flow.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\libs\mynewt-nimble\nimble\host\src\ble_hs_mqueue.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\libs\mynewt-nimble\nimble\host\src\ble_hs_stop.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\libs\mynewt-nimble\nimble\host\src\ble_hs_startup.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\libs\mynewt-nimble\nimble\host\store\ram\src\ble_store_ram.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\libs\mynewt-nimble\nimble\host\src\ble_monitor.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\libs\mynewt-nimble\nimble\transport\ram\src\ble_hci_ram.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\libs\mynewt-nimble\nimble\controller\src\ble_ll.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\libs\mynewt-nimble\nimble\controller\src\ble_ll_rand.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\libs\mynewt-nimble\nimble\controller\src\ble_ll_conn.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\libs\mynewt-nimble\nimble\controller\src\ble_ll_ctrl.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\libs\mynewt-nimble\nimble\controller\src\ble_ll_hci.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\libs\mynewt-nimble\nimble\controller\src\ble_ll_conn_hci.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\libs\mynewt-nimble\nimble\controller\src\ble_ll_utils.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\libs\mynewt-nimble\nimble\controller\src\ble_ll_scan.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\libs\mynewt-nimble\nimble\controller\src\ble_ll_whitelist.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\libs\mynewt-nimble\nimble\controller\src\ble_ll_adv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\libs\mynewt-nimble\nimble\controller\src\ble_ll_sched.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\libs\mynewt-nimble\nimble\controller\src\ble_ll_supp_cmd.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\libs\mynewt-nimble\nimble\controller\src\ble_ll_hci_ev.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\libs\mynewt-nimble\nimble\controller\src\ble_ll_rfmgmt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\libs\mynewt-nimble\nimble\controller\src\ble_ll_resolv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\libs\mynewt-nimble\porting\nimble\src\os_cputime.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\libs\mynewt-nimble\porting\nimble\src\os_cputime_pwr2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\libs\mynewt-nimble\porting\nimble\src\os_mbuf.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\libs\mynewt-nimble\porting\nimble\src\os_mempool.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\libs\mynewt-nimble\porting\nimble\src\hal_timer.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\libs\mynewt-nimble\porting\nimble\src\mem.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\libs\mynewt-nimble\porting\nimble\src\endian.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\libs\mynewt-nimble\porting\nimble\src\os_msys_init.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\libs\mynewt-nimble\nimble\drivers\nrf52\src\ble_hw.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\libs\mynewt-nimble\nimble\drivers\nrf52\src\ble_phy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\libs\mynewt-nimble\nimble\host\services\gap\src\ble_svc_gap.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\libs\mynewt-nimble\nimble\host\services\gatt\src\ble_svc_gatt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\libs\mynewt-nimble\nimble\host\util\src\addr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\libs\mynewt-nimble\ext\tinycrypt\src\aes_encrypt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\libs\mynewt-nimble\ext\tinycrypt\src\utils.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\libs\mynewt-nimble\ext\tinycrypt\src\cmac_mode.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\libs\mynewt-nimble\ext\tinycrypt\src\ecc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\libs\mynewt-nimble\ext\tinycrypt\src\ecc_dh.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\pmister\source\repos\InfiniTime\src\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{F6C88CC1-B7EC-390D-B3D8-D80989C58291}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

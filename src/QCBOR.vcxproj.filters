@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\libs\QCBOR\src\ieee754.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\libs\QCBOR\src\qcbor_decode.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\libs\QCBOR\src\qcbor_encode.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\libs\QCBOR\src\qcbor_err_to_str.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\pmister\source\repos\InfiniTime\src\libs\QCBOR\src\UsefulBuf.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\pmister\source\repos\InfiniTime\src\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{F6C88CC1-B7EC-390D-B3D8-D80989C58291}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
