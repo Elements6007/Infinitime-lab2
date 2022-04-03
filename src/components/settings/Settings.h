@@ -188,6 +188,7 @@ namespace Pinetime {
       };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
      
 
       /*void setFlashLight(Controllers::BrightnessController::Levels level) {
@@ -196,10 +197,15 @@ namespace Pinetime {
       void SetStepsGoal( uint32_t goal ) { 
         if ( goal != settings.stepsGoal ) {
 >>>>>>> parent of 187ea0f (Merge branch 'develop' of JF/PineTime into master)
+=======
+      void SetStepsGoal( uint32_t goal ) { 
+        if ( goal != settings.stepsGoal ) {
+>>>>>>> parent of 187ea0f (Merge branch 'develop' of JF/PineTime into master)
           settingsChanged = true;
         }
         settings.Flashlight = level;
       };
+<<<<<<< HEAD
 <<<<<<< HEAD
       Controllers::BrightnessController::Levels setFlashLight() const {
         return settings.Flashlight;
@@ -212,6 +218,8 @@ namespace Pinetime {
         }
         settings.stepsGoal = goal; 
       };
+=======
+>>>>>>> parent of 187ea0f (Merge branch 'develop' of JF/PineTime into master)
 =======
 >>>>>>> parent of 187ea0f (Merge branch 'develop' of JF/PineTime into master)
       

@@ -15,7 +15,11 @@ namespace {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 constexpr std::array<const char*, 5> SettingWatchFace::options;
+=======
+constexpr std::array<const char*, 3> SettingWatchFace::options;
+>>>>>>> parent of 187ea0f (Merge branch 'develop' of JF/PineTime into master)
 =======
 constexpr std::array<const char*, 3> SettingWatchFace::options;
 >>>>>>> parent of 187ea0f (Merge branch 'develop' of JF/PineTime into master)

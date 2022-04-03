@@ -341,11 +341,14 @@ void PineTimeStyle::SetBatteryIcon() {
   auto batteryPercent = batteryPercentRemaining.Get();
   lv_label_set_text(batteryIcon, BatteryIcon::GetBatteryIcon(batteryPercent));
 <<<<<<< HEAD
+<<<<<<< HEAD
    if (batteryPercent == 100) {
       lv_obj_set_style_local_text_color(batteryIcon, LV_LABEL_PART_MAIN, LV_STATE_DEFAULT, LV_COLOR_GREEN);
     } else {
       lv_obj_set_style_local_text_color(batteryIcon, LV_LABEL_PART_MAIN, LV_STATE_DEFAULT, LV_COLOR_WHITE);
     }
+=======
+>>>>>>> parent of 187ea0f (Merge branch 'develop' of JF/PineTime into master)
 =======
 >>>>>>> parent of 187ea0f (Merge branch 'develop' of JF/PineTime into master)
 }
@@ -405,15 +408,21 @@ void PineTimeStyle::Refresh() {
     int hour = time.hours().count();
     auto minute = time.minutes().count();
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 187ea0f (Merge branch 'develop' of JF/PineTime into master)
 
     char minutesChar[3];
     sprintf(minutesChar, "%02d", static_cast<int>(minute));
 
+<<<<<<< HEAD
 =======
 
     char minutesChar[3];
     sprintf(minutesChar, "%02d", static_cast<int>(minute));
 
+>>>>>>> parent of 187ea0f (Merge branch 'develop' of JF/PineTime into master)
+=======
 >>>>>>> parent of 187ea0f (Merge branch 'develop' of JF/PineTime into master)
     char hoursChar[3];
     char ampmChar[5];

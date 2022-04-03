@@ -21,9 +21,12 @@ namespace Pinetime {
 
       private:
 <<<<<<< HEAD
+<<<<<<< HEAD
         static constexpr std::array<const char*, 5> options = {" Digital face", " Analog face", " PineTimeStyle", "Terminal face", " Simpe face"};
         Controllers::Settings& settingsController; 
 =======
+=======
+>>>>>>> parent of 187ea0f (Merge branch 'develop' of JF/PineTime into master)
         static constexpr std::array<const char*, 3> options = {" Digital face", " Analog face", " PineTimeStyle"};
         Controllers::Settings& settingsController;
 >>>>>>> parent of 187ea0f (Merge branch 'develop' of JF/PineTime into master)
