@@ -1,8 +1,6 @@
 #pragma once
 
 #include <array>
-#include <cstddef>
-#include <cstdint>
 #include "components/heartrate/Biquad.h"
 #include "components/heartrate/Ptagc.h"
 

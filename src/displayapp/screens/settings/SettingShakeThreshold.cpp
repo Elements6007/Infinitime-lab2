@@ -1,4 +1,4 @@
-#include "displayapp/screens/settings/SettingShakeThreshold.h"
+#include "SettingShakeThreshold.h"
 #include <lvgl/lvgl.h>
 #include "displayapp/DisplayApp.h"
 #include "displayapp/screens/Screen.h"

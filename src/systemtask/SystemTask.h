@@ -3,7 +3,6 @@
 #include <memory>
 
 #include <FreeRTOS.h>
-#include <queue.h>
 #include <task.h>
 #include <timers.h>
 #include <heartratetask/HeartRateTask.h>
@@ -13,6 +12,7 @@
 #include <components/motion/MotionController.h>
 
 #include "systemtask/SystemMonitor.h"
+#include "components/battery/BatteryController.h"
 #include "components/ble/NimbleController.h"
 #include "components/ble/NotificationManager.h"
 #include "components/motor/MotorController.h"
@@ -46,7 +46,6 @@ namespace Pinetime {
     class Hrs3300;
   }
   namespace Controllers {
-    class Battery;
     class TouchHandler;
     class ButtonHandler;
   }
@@ -148,7 +147,11 @@ namespace Pinetime {
       bool stepCounterMustBeReset = false;
       static constexpr TickType_t batteryMeasurementPeriod = pdMS_TO_TICKS(10 * 60 * 1000);
 
-      SystemMonitor monitor;
+#if configUSE_TRACE_FACILITY == 1
+      SystemMonitor<FreeRtosMonitor> monitor;
+#else
+      SystemMonitor<DummyMonitor> monitor;
+#endif
     };
   }
 }

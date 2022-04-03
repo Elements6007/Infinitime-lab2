@@ -34,10 +34,10 @@ namespace Pinetime {
 
         void Refresh() override;
 
+        void OnObjectEvent(lv_obj_t* pObj, lv_event_t i);
+
       private:
-        uint8_t displayedHour = -1;
-        uint8_t displayedMinute = -1;
-        uint8_t displayedSecond = -1;
+        char displayedChar[8];
 
         uint16_t currentYear = 1970;
         Pinetime::Controllers::DateTime::Months currentMonth = Pinetime::Controllers::DateTime::Months::Unknown;
@@ -45,9 +45,7 @@ namespace Pinetime {
         uint8_t currentDay = 0;
 
         DirtyValue<int> batteryPercentRemaining {};
-        DirtyValue<bool> powerPresent {};
         DirtyValue<bool> bleState {};
-        DirtyValue<bool> bleRadioEnabled {};
         DirtyValue<std::chrono::time_point<std::chrono::system_clock, std::chrono::nanoseconds>> currentDateTime {};
         DirtyValue<bool> motionSensorOk {};
         DirtyValue<uint32_t> stepCount {};
@@ -60,11 +58,17 @@ namespace Pinetime {
         lv_obj_t* label_prompt_1;
         lv_obj_t* label_prompt_2;
         lv_obj_t* backgroundLabel;
-        lv_obj_t* batteryValue;
+        lv_obj_t* batteryIcon;
+        lv_obj_t* bleIcon;
+        lv_obj_t* batteryPlug;
+        lv_obj_t* batteryPercent;
+        lv_obj_t* heartbeatIcon;
         lv_obj_t* heartbeatValue;
+        lv_obj_t* heartbeatBpm;
         lv_obj_t* stepValue;
         lv_obj_t* notificationIcon;
         lv_obj_t* connectState;
+        lv_obj_t* bleValue;
 
         Controllers::DateTime& dateTimeController;
         Controllers::Battery& batteryController;

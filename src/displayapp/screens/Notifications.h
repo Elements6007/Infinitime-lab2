@@ -1,13 +1,11 @@
 #pragma once
 
 #include <lvgl/lvgl.h>
-#include <FreeRTOS.h>
 #include <cstdint>
 #include <memory>
 #include "displayapp/screens/Screen.h"
 #include "components/ble/NotificationManager.h"
 #include "components/motor/MotorController.h"
-#include "systemtask/SystemTask.h"
 
 namespace Pinetime {
   namespace Controllers {
@@ -23,13 +21,11 @@ namespace Pinetime {
                                Pinetime::Controllers::NotificationManager& notificationManager,
                                Pinetime::Controllers::AlertNotificationService& alertNotificationService,
                                Pinetime::Controllers::MotorController& motorController,
-                               System::SystemTask& systemTask,
                                Modes mode);
         ~Notifications() override;
 
         void Refresh() override;
         bool OnTouchEvent(Pinetime::Applications::TouchEvents event) override;
-        void OnPreviewInteraction();
 
         class NotificationItem {
         public:
@@ -39,8 +35,7 @@ namespace Pinetime {
                            Controllers::NotificationManager::Categories,
                            uint8_t notifNb,
                            Modes mode,
-                           Pinetime::Controllers::AlertNotificationService& alertNotificationService,
-                           Pinetime::Controllers::MotorController& motorController);
+                           Pinetime::Controllers::AlertNotificationService& alertNotificationService);
           ~NotificationItem();
           bool IsRunning() const {
             return running;
@@ -57,15 +52,16 @@ namespace Pinetime {
           lv_obj_t* label_reject;
           Modes mode;
           Pinetime::Controllers::AlertNotificationService& alertNotificationService;
-          Pinetime::Controllers::MotorController& motorController;
           bool running = true;
         };
 
       private:
+        struct NotificationData {
+          const char* title;
+          const char* text;
+        };
         Pinetime::Controllers::NotificationManager& notificationManager;
         Pinetime::Controllers::AlertNotificationService& alertNotificationService;
-        Pinetime::Controllers::MotorController& motorController;
-        System::SystemTask& systemTask;
         Modes mode = Modes::Normal;
         std::unique_ptr<NotificationItem> currentItem;
         Controllers::NotificationManager::Notification::Id currentId;
@@ -73,9 +69,8 @@ namespace Pinetime {
 
         lv_point_t timeoutLinePoints[2] {{0, 1}, {239, 1}};
         lv_obj_t* timeoutLine = nullptr;
-        TickType_t timeoutTickCountStart;
-        static const TickType_t timeoutLength = pdMS_TO_TICKS(7000);
-        bool interacted = true;
+        uint32_t timeoutTickCountStart;
+        uint32_t timeoutTickCountEnd;
 
         lv_task_t* taskRefresh;
       };

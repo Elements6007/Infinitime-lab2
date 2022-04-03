@@ -14,7 +14,6 @@
 #include "components/ble/CurrentTimeService.h"
 #include "components/ble/DeviceInformationService.h"
 #include "components/ble/DfuService.h"
-#include "components/ble/FSService.h"
 #include "components/ble/HeartRateService.h"
 #include "components/ble/ImmediateAlertService.h"
 #include "components/ble/MusicService.h"
@@ -23,6 +22,7 @@
 #include "components/ble/MotionService.h"
 #include "components/ble/weather/WeatherService.h"
 #include "components/fs/FS.h"
+#include "components/ble/FSService.h"
 
 namespace Pinetime {
   namespace Drivers {
@@ -42,17 +42,27 @@ namespace Pinetime {
 
     public:
       NimbleController(Pinetime::System::SystemTask& systemTask,
-                       Ble& bleController,
+                       Pinetime::Controllers::Ble& bleController,
                        DateTime& dateTimeController,
-                       NotificationManager& notificationManager,
-                       Battery& batteryController,
+                       Pinetime::Controllers::NotificationManager& notificationManager,
+                       Controllers::Battery& batteryController,
                        Pinetime::Drivers::SpiNorFlash& spiNorFlash,
-                       HeartRateController& heartRateController,
-                       MotionController& motionController,
-                       FS& fs);
+                       Controllers::HeartRateController& heartRateController,
+                       Controllers::MotionController& motionController,
+                       Pinetime::Controllers::FS& fs);
       void Init();
       void StartAdvertising();
       int OnGAPEvent(ble_gap_event* event);
+
+      int OnDiscoveryEvent(uint16_t i, const ble_gatt_error* pError, const ble_gatt_svc* pSvc);
+      int OnCTSCharacteristicDiscoveryEvent(uint16_t connectionHandle, const ble_gatt_error* error, const ble_gatt_chr* characteristic);
+      int OnANSCharacteristicDiscoveryEvent(uint16_t connectionHandle, const ble_gatt_error* error, const ble_gatt_chr* characteristic);
+      int OnCurrentTimeReadResult(uint16_t connectionHandle, const ble_gatt_error* error, ble_gatt_attr* attribute);
+      int OnANSDescriptorDiscoveryEventCallback(uint16_t connectionHandle,
+                                                const ble_gatt_error* error,
+                                                uint16_t characteristicValueHandle,
+                                                const ble_gatt_dsc* descriptor);
+
       void StartDiscovery();
 
       Pinetime::Controllers::MusicService& music() {
@@ -73,10 +83,7 @@ namespace Pinetime {
 
       void RestartFastAdv() {
         fastAdvCount = 0;
-      };
-
-      void EnableRadio();
-      void DisableRadio();
+      }
 
     private:
       void PersistBond(struct ble_gap_conn_desc& desc);
@@ -84,12 +91,12 @@ namespace Pinetime {
 
       static constexpr const char* deviceName = "InfiniTime";
       Pinetime::System::SystemTask& systemTask;
-      Ble& bleController;
+      Pinetime::Controllers::Ble& bleController;
       DateTime& dateTimeController;
-      NotificationManager& notificationManager;
+      Pinetime::Controllers::NotificationManager& notificationManager;
       Pinetime::Drivers::SpiNorFlash& spiNorFlash;
-      FS& fs;
-      DfuService dfuService;
+      Pinetime::Controllers::FS& fs;
+      Pinetime::Controllers::DfuService dfuService;
 
       DeviceInformationService deviceInformationService;
       CurrentTimeClient currentTimeClient;

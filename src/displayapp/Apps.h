@@ -39,7 +39,6 @@ namespace Pinetime {
       SettingChimes,
       SettingShakeThreshold,
       pagetest,
-      SettingBluetooth,
       Error
     };
   }

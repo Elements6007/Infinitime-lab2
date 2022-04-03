@@ -21,8 +21,7 @@ namespace Pinetime {
         RestoreBrightness,
         ShowPairingKey,
         AlarmTriggered,
-        Clock,
-        BleRadioEnableToggle
+        Clock
       };
     }
   }

@@ -6,7 +6,6 @@
 #include <memory>
 #include "displayapp/screens/Screen.h"
 #include "components/datetime/DateTimeController.h"
-#include "components/ble/BleController.h"
 
 namespace Pinetime {
   namespace Controllers {
@@ -36,18 +35,16 @@ namespace Pinetime {
         void Refresh() override;
 
       private:
-        uint8_t displayedHour = -1;
-        uint8_t displayedMinute = -1;
+        char displayedChar[5] {};
 
         uint16_t currentYear = 1970;
-        Controllers::DateTime::Months currentMonth = Pinetime::Controllers::DateTime::Months::Unknown;
-        Controllers::DateTime::Days currentDayOfWeek = Pinetime::Controllers::DateTime::Days::Unknown;
+        Pinetime::Controllers::DateTime::Months currentMonth = Pinetime::Controllers::DateTime::Months::Unknown;
+        Pinetime::Controllers::DateTime::Days currentDayOfWeek = Pinetime::Controllers::DateTime::Days::Unknown;
         uint8_t currentDay = 0;
 
         DirtyValue<uint8_t> batteryPercentRemaining {};
         DirtyValue<bool> powerPresent {};
         DirtyValue<bool> bleState {};
-        DirtyValue<bool> bleRadioEnabled {};
         DirtyValue<std::chrono::time_point<std::chrono::system_clock, std::chrono::nanoseconds>> currentDateTime {};
         DirtyValue<bool> motionSensorOk {};
         DirtyValue<uint32_t> stepCount {};

@@ -5,7 +5,6 @@
 #include "components/settings/Settings.h"
 #include "displayapp/screens/Screen.h"
 #include <components/motion/MotionController.h>
-#include "systemtask/SystemTask.h"
 namespace Pinetime {
 
   namespace Applications {

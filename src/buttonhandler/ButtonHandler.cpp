@@ -1,4 +1,4 @@
-#include "buttonhandler/ButtonHandler.h"
+#include "ButtonHandler.h"
 
 using namespace Pinetime::Controllers;
 

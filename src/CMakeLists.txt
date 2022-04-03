@@ -450,13 +450,11 @@ list(APPEND SOURCE_FILES
         displayapp/screens/settings/SettingSetTime.cpp
         displayapp/screens/settings/SettingChimes.cpp
         displayapp/screens/settings/SettingShakeThreshold.cpp
-        displayapp/screens/settings/SettingBluetooth.cpp
 
         ## Watch faces
         displayapp/icons/bg_clock.c
         displayapp/screens/WatchFaceAnalog.cpp
         displayapp/screens/WatchFaceDigital.cpp
-        displayapp/screens/WatchFaceTerminal.cpp
         displayapp/screens/PineTimeStyle.cpp
         displayapp/screens/WatchFaceTerminal.cpp
         displayapp/screens/WatchFaceSimple.cpp
@@ -519,7 +517,6 @@ list(APPEND SOURCE_FILES
         displayapp/lv_pinetime_theme.c
 
         systemtask/SystemTask.cpp
-        systemtask/SystemMonitor.cpp
         drivers/TwiMaster.cpp
 
         heartratetask/HeartRateTask.cpp
@@ -581,7 +578,6 @@ list(APPEND RECOVERY_SOURCE_FILES
         FreeRTOS/port_cmsis.c
 
         systemtask/SystemTask.cpp
-        systemtask/SystemMonitor.cpp
         drivers/TwiMaster.cpp
         components/gfx/Gfx.cpp
         components/rle/RleDecoder.cpp
@@ -619,7 +615,6 @@ list(APPEND RECOVERYLOADER_SOURCE_FILES
 
 set(INCLUDE_FILES
 
-        ${CMAKE_CURRENT_BINARY_DIR}/src/Version.h
         BootloaderVersion.h
         logging/Logger.h
         logging/NrfLogger.h
@@ -634,6 +629,7 @@ set(INCLUDE_FILES
         displayapp/screens/pagetest.h
         displayapp/screens/StopWatch.h
         displayapp/screens/Paddle.h
+        displayapp/screens/DropDownDemo.h
         displayapp/screens/BatteryIcon.h
         displayapp/screens/BleIcon.h
         displayapp/screens/NotificationIcon.h
@@ -718,7 +714,6 @@ set(INCLUDE_FILES
         )
 
 include_directories(
-        ${CMAKE_BINARY_DIR}/src # include generated files like Version.h
         .
         ../
         libs/

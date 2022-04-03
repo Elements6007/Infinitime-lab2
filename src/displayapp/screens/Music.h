@@ -40,7 +40,7 @@ namespace Pinetime {
         void OnObjectEvent(lv_obj_t* obj, lv_event_t event);
 
       private:
-        bool OnTouchEvent(TouchEvents event) override;
+        bool OnTouchEvent(TouchEvents event);
 
         void UpdateLength();
 
@@ -69,7 +69,7 @@ namespace Pinetime {
         std::string track;
 
         /** Total length in seconds */
-        int totalLength = 0;
+        int totalLength;
         /** Current length in seconds */
         int currentLength;
         /** Last length */

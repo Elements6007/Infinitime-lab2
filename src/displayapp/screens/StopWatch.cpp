@@ -1,10 +1,13 @@
-#include "displayapp/screens/StopWatch.h"
+#include "StopWatch.h"
 
 #include "displayapp/screens/Screen.h"
 #include "displayapp/screens/Symbols.h"
 #include <lvgl/lvgl.h>
-#include <FreeRTOS.h>
-#include <task.h>
+#include "projdefs.h"
+#include "FreeRTOSConfig.h"
+#include "task.h"
+
+#include <tuple>
 
 using namespace Pinetime::Applications::Screens;
 

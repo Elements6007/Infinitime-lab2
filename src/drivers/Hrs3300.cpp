@@ -36,8 +36,8 @@ void Hrs3300::Init() {
   // HRS and ALS both in 16-bit mode
   WriteRegister(static_cast<uint8_t>(Registers::Res), 0x88);
 
-  // 8x gain, non default, reduced value for better readings
-  WriteRegister(static_cast<uint8_t>(Registers::Hgain), 0xc);
+  // 64x gain
+  WriteRegister(static_cast<uint8_t>(Registers::Hgain), 0x10);
 }
 
 void Hrs3300::Enable() {
@@ -54,18 +54,18 @@ void Hrs3300::Disable() {
   WriteRegister(static_cast<uint8_t>(Registers::Enable), value);
 }
 
-uint32_t Hrs3300::ReadHrs() {
+uint16_t Hrs3300::ReadHrs() {
   auto m = ReadRegister(static_cast<uint8_t>(Registers::C0DataM));
   auto h = ReadRegister(static_cast<uint8_t>(Registers::C0DataH));
   auto l = ReadRegister(static_cast<uint8_t>(Registers::C0dataL));
-  return ((l & 0x30) << 12) | (m << 8) | ((h & 0x0f) << 4) | (l & 0x0f);
+  return (m << 8) | ((h & 0x0f) << 4) | (l & 0x0f) | ((l & 0x30) << 12);
 }
 
-uint32_t Hrs3300::ReadAls() {
+uint16_t Hrs3300::ReadAls() {
   auto m = ReadRegister(static_cast<uint8_t>(Registers::C1dataM));
   auto h = ReadRegister(static_cast<uint8_t>(Registers::C1dataH));
   auto l = ReadRegister(static_cast<uint8_t>(Registers::C1dataL));
-  return ((h & 0x3f) << 11) | (m << 3) | (l & 0x07);
+  return (m << 3) | ((h & 0x3f) << 11) | (l & 0x07);
 }
 
 void Hrs3300::SetGain(uint8_t gain) {

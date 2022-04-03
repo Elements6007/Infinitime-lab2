@@ -65,7 +65,8 @@ void HeartRateTask::Work() {
     }
 
     if (measurementStarted) {
-      ppg.Preprocess(static_cast<float>(heartRateSensor.ReadHrs()));
+      auto hrs = heartRateSensor.ReadHrs();
+      ppg.Preprocess(hrs);
       auto bpm = ppg.HeartRate();
 
       if (lastBpm == 0 && bpm == 0)

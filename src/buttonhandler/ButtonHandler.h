@@ -1,6 +1,6 @@
 #pragma once
 
-#include "buttonhandler/ButtonActions.h"
+#include "ButtonActions.h"
 #include "systemtask/SystemTask.h"
 #include <FreeRTOS.h>
 #include <timers.h>

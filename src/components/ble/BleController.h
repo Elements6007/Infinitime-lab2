@@ -12,13 +12,11 @@ namespace Pinetime {
       enum class AddressTypes { Public, Random, RPA_Public, RPA_Random };
 
       Ble() = default;
-      bool IsConnected() const;
+      bool IsConnected() const {
+        return isConnected;
+      }
       void Connect();
       void Disconnect();
-
-      bool IsRadioEnabled() const;
-      void EnableRadio();
-      void DisableRadio();
 
       void StartFirmwareUpdate();
       void StopFirmwareUpdate();
@@ -59,7 +57,6 @@ namespace Pinetime {
 
     private:
       bool isConnected = false;
-      bool isRadioEnabled = true;
       bool isFirmwareUpdating = false;
       uint32_t firmwareUpdateTotalBytes = 0;
       uint32_t firmwareUpdateCurrentBytes = 0;
