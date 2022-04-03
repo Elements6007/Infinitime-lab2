@@ -345,10 +345,11 @@ void PineTimeStyle::SetBatteryIcon() {
 
 
 void PineTimeStyle::AlignIcons() {
-  if (notificationState.Get() && bleState.Get()) {
+  bool isBleIconVisible = IsBleIconVisible(bleRadioEnabled.Get(), bleState.Get());
+  if (notificationState.Get() && isBleIconVisible) {
     lv_obj_align(bleIcon, sidebar, LV_ALIGN_IN_TOP_MID, 8, 25);
     lv_obj_align(notificationIcon, sidebar, LV_ALIGN_IN_TOP_MID, -8, 25);
-  } else if (notificationState.Get() && !bleState.Get()) {
+  } else if (notificationState.Get() && !isBleIconVisible) {
     lv_obj_align(notificationIcon, sidebar, LV_ALIGN_IN_TOP_MID, 0, 25);
   } else {
     lv_obj_align(bleIcon, sidebar, LV_ALIGN_IN_TOP_MID, 0, 25);
@@ -374,7 +375,7 @@ void PineTimeStyle::Refresh() {
   bleState = bleController.IsConnected();
   bleRadioEnabled = bleController.IsRadioEnabled();
   if (bleState.IsUpdated() || bleRadioEnabled.IsUpdated()) {
-    lv_label_set_text(bleIcon, BleIcon::GetIcon(bleState.Get()));
+    lv_label_set_text(bleIcon, BleIcon::GetIcon(bleRadioEnabled.Get(), bleState.Get()));
     AlignIcons();
   }
 

@@ -2,7 +2,11 @@
 #include "displayapp/screens/Symbols.h"
 using namespace Pinetime::Applications::Screens;
 
-const char* BleIcon::GetIcon(bool isConnected) {
+const char* BleIcon::GetIcon(bool isRadioEnabled, bool isConnected) {
+  if(!isRadioEnabled) {
+    return Symbols::airplane;
+  }
+
   if (isConnected) {
     return Symbols::bluetooth;
   }
