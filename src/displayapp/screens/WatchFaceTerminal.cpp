@@ -83,7 +83,7 @@ WatchFaceTerminal::~WatchFaceTerminal() {
   lv_obj_clean(lv_scr_act());
 }
 
-void loop() {
+loop() {
   lv_obj_set_hidden(label_prompt_2, true);
   sleep(5000);
   !lv_obj_set_hidden(label_prompt_2, true);
