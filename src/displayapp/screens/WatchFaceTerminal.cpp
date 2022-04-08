@@ -83,10 +83,6 @@ WatchFaceTerminal::~WatchFaceTerminal() {
   lv_obj_clean(lv_scr_act());
 }
 
-int loop() {
-  lv_obj_set_hidden(lv_obj_t* label_prompt_2, true);
-  lv_obj_set_hidden(lv_obj_t* label_prompt_2, false);
-} 
 
 void WatchFaceTerminal::Refresh() {
   powerPresent = batteryController.IsPowerPresent();
