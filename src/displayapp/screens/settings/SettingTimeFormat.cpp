@@ -73,10 +73,10 @@ void SettingTimeFormat::UpdateSelected(lv_obj_t* object, lv_event_t event) {
         if (i == 0) {
           settingsController.SetClockType(Controllers::Settings::ClockType::H12);
         };
-        if (i == 1) {
+        if (i == 2) {
           settingsController.SetClockType(Controllers::Settings::ClockType::H24);
         };
-        if (i == 2) {
+        if (i == 1) {
           settingsController.SetClockType(Controllers::Settings::ClockType::H24);
         }
 
