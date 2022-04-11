@@ -14,7 +14,7 @@ namespace {
   }
 }
 
-constexpr std::array<const char*, 2> SettingTimeFormat::options;
+constexpr std::array<const char*, 3> SettingTimeFormat::options;
 
 SettingTimeFormat::SettingTimeFormat(Pinetime::Applications::DisplayApp* app, Pinetime::Controllers::Settings& settingsController)
   : Screen(app), settingsController {settingsController} {
@@ -54,7 +54,7 @@ SettingTimeFormat::SettingTimeFormat(Pinetime::Applications::DisplayApp* app, Pi
     lv_checkbox_set_checked(cbOption[0], true);
   } else if (settingsController.GetClockType() == Controllers::Settings::ClockType::H24) {
     lv_checkbox_set_checked(cbOption[1], true);
-  } else if settingsController.GetClockType() == Controllers::Settings::ClockType::H24 {
+  } else if (settingsController.GetClockType() == Controllers::Settings::ClockType::H24 {
     lv_checkbox_set_checked(cb0ption[2], true);
   }
 }
