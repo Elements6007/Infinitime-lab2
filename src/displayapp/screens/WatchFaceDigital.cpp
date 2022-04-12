@@ -149,7 +149,7 @@ void WatchFaceDigital::Refresh() {
     uint8_t hour = time.hours().count();
     uint8_t minute = time.minutes().count();
 
-    if (displayedHour != hour || displayedMinute != minute) {
+   /* if (displayedHour != hour || displayedMinute != minute) {
       displayedHour = hour;
       displayedMinute = minute;
 
@@ -187,7 +187,9 @@ void WatchFaceDigital::Refresh() {
       currentDayOfWeek = dayOfWeek;
       currentDay = day;
     }
-  }
+  }*/
+
+  lv_label_set_text(label_time, dateTimeController.FormattedTime().c_str());
 
   heartbeat = heartRateController.HeartRate();
   heartbeatRunning = heartRateController.State() != Controllers::HeartRateController::States::Stopped;

@@ -129,7 +129,7 @@ std::string DateTime::FormattedTime() {
   // Return time as a string in 12- or 24-hour format
   char buff[9];
 
-if (settingsController.GetClockType() == ClockType::Global){
+//if (settingsController.GetClockType() == ClockType::Global){
     if (settingsController.GetClockType() == ClockType::H12) {
       uint8_t hour12;
       const char* amPmStr;
@@ -146,5 +146,5 @@ if (settingsController.GetClockType() == ClockType::Global){
   }
   return std::string(buff);
 }
-return std::string(buff);
-}
+//return std::string(buff);
+//}
