@@ -140,8 +140,8 @@ if (settingsController.GetClockType() == ClockType::Global){
         amPmStr = "PM";
       }
       sprintf(buff, "%i:%02i %s", hour12, minute, amPmStr);
-}
- else if (settingsController.GetClockType() == ClockType::H12) {
+
+    if (settingsController.GetClockType() == ClockType::H12) {
       uint8_t hour12;
       const char* amPmStr;
       if (hour < 12) {
@@ -156,4 +156,5 @@ if (settingsController.GetClockType() == ClockType::Global){
     sprintf(buff, "%02i:%02i", hour, minute);
   }
   return std::string(buff);
+}
 }
