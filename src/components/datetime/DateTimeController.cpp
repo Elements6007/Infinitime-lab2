@@ -146,4 +146,5 @@ if (settingsController.GetClockType() == ClockType::Global){
   }
   return std::string(buff);
 }
+return std::string(buff);
 }
