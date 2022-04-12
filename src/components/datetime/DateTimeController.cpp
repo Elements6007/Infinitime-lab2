@@ -128,7 +128,20 @@ using ClockType = Pinetime::Controllers::Settings::ClockType;
 std::string DateTime::FormattedTime() {
   // Return time as a string in 12- or 24-hour format
   char buff[9];
-  if (settingsController.GetClockType() == ClockType::H12) {
+
+if (settingsController.GetClockType() == ClockType::Global){
+  uint8_t hour12;
+      const char* amPmStr;
+      if (hour < 12) {
+        hour12 = (hour == 0) ? 12 : hour;
+        amPmStr = "AM";
+      } else {
+        hour12 = (hour == 12) ? 12 : hour - 12;
+        amPmStr = "PM";
+      }
+      sprintf(buff, "%i:%02i %s", hour12, minute, amPmStr);
+}
+ else if (settingsController.GetClockType() == ClockType::H12) {
       uint8_t hour12;
       const char* amPmStr;
       if (hour < 12) {

@@ -54,7 +54,7 @@ SettingTimeFormat::SettingTimeFormat(Pinetime::Applications::DisplayApp* app, Pi
     lv_checkbox_set_checked(cbOption[0], true);
   } else if (settingsController.GetClockType() == Controllers::Settings::ClockType::H24) {
     lv_checkbox_set_checked(cbOption[1], true);
-  } else if (settingsController.GetClockType() == Controllers::Settings::ClockType::H24) {
+  } else if (settingsController.GetClockType() == Controllers::Settings::ClockType::Global) {
     lv_checkbox_set_checked(cbOption[2], true);
   }
 }
@@ -73,11 +73,11 @@ void SettingTimeFormat::UpdateSelected(lv_obj_t* object, lv_event_t event) {
         if (i == 0) {
           settingsController.SetClockType(Controllers::Settings::ClockType::H12);
         };
-        if (i == 2) {
-          settingsController.SetClockType(Controllers::Settings::ClockType::H24);
-        };
         if (i == 1) {
           settingsController.SetClockType(Controllers::Settings::ClockType::H24);
+        };
+        if (i == 2) {
+          settingsController.SetClockType(Controllers::Settings::ClockType::Global);
         }
 
       } else {
