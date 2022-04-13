@@ -479,7 +479,7 @@ void SystemTask::Work() {
     }
   }
 #pragma clang diagnostic pop
-}
+}}
 
 void SystemTask::UpdateMotion() {
   if (isGoingToSleep or isWakingUp) {
