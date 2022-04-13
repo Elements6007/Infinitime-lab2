@@ -214,4 +214,5 @@ void WatchFaceDigital::Refresh() {
     lv_obj_realign(stepIcon);
   }
   }
-}
+}}
+
