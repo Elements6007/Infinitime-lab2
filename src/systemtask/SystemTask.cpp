@@ -401,6 +401,7 @@ void SystemTask::Work() {
           break;
         case Messages::OnNewHour:
           using Pinetime::Controllers::AlarmController;
+          
           if (
             settingsController.GetChimeOption() == Controllers::Settings::ChimesOption::Hours && 
             settingsController.GetNotificationStatus() == Controllers::Settings::Notification::ON &&
