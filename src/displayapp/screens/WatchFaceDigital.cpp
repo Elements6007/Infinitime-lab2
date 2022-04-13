@@ -189,8 +189,6 @@ void WatchFaceDigital::Refresh() {
     }
   }
 
-  
-
   heartbeat = heartRateController.HeartRate();
   heartbeatRunning = heartRateController.State() != Controllers::HeartRateController::States::Stopped;
   if (heartbeat.IsUpdated() || heartbeatRunning.IsUpdated()) {
@@ -213,6 +211,4 @@ void WatchFaceDigital::Refresh() {
     lv_obj_realign(stepValue);
     lv_obj_realign(stepIcon);
   }
-  }
-}}
-
+}
