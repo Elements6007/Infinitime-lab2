@@ -236,6 +236,8 @@ namespace Pinetime {
         uint8_t clockFace = 0;
         ChimesOption chimesOption = ChimesOption::None;
 
+        FlashLight Flashlight = FlashLight::Low;
+
         PineTimeStyle PTS;
 
         std::bitset<4> wakeUpMode {0};
