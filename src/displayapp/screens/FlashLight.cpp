@@ -1,6 +1,8 @@
+
 #include "displayapp/screens/FlashLight.h"
 #include "displayapp/DisplayApp.h"
 #include "displayapp/screens/Symbols.h"
+#include "components/settings/Settings.h"
 
 using namespace Pinetime::Applications::Screens;
 
@@ -13,15 +15,17 @@ namespace {
 
 FlashLight::FlashLight(Pinetime::Applications::DisplayApp* app,
                        System::SystemTask& systemTask,
-                       Controllers::BrightnessController& brightnessController)
+                       Controllers::BrightnessController& brightnessController,
+                       Controllers::Settings& settingsController)
   : Screen(app),
     systemTask {systemTask},
-    brightnessController {brightnessController}
+    brightnessController {brightnessController},
+    settingsController {settingsController}
 
 {
   brightnessController.Backup();
 
-  brightnessLevel = brightnessController.Level();
+  /*brightnessLevel = settingsController.GetFlashLight(Controllers::Settings::FlashLight);*/
 
   flashLight = lv_label_create(lv_scr_act(), nullptr);
   lv_obj_set_style_local_text_font(flashLight, LV_LABEL_PART_MAIN, LV_STATE_DEFAULT, &lv_font_sys_48);
@@ -56,6 +60,7 @@ FlashLight::FlashLight(Pinetime::Applications::DisplayApp* app,
 FlashLight::~FlashLight() {
   lv_obj_clean(lv_scr_act());
   lv_obj_set_style_local_bg_color(lv_scr_act(), LV_OBJ_PART_MAIN, LV_STATE_DEFAULT, LV_COLOR_BLACK);
+  FlashLight.brightnessSave();
   brightnessController.Restore();
   systemTask.PushMessage(Pinetime::System::Messages::EnableSleeping);
 }
@@ -110,10 +115,12 @@ bool FlashLight::OnTouchEvent(Pinetime::Applications::TouchEvents event) {
       brightnessLevel = BrightnessController::Levels::Medium;
       brightnessController.Set(brightnessLevel);
       SetIndicators();
+     settingsController.SetFlashLight(Controllers::Settings::FlashLight::Medium);
     } else if (brightnessLevel == BrightnessController::Levels::Medium) {
       brightnessLevel = BrightnessController::Levels::Low;
       brightnessController.Set(brightnessLevel);
       SetIndicators();
+      settingsController.SetFlashLight(Controllers::Settings::FlashLight::Low);
     }
     return true;
   }
@@ -122,13 +129,39 @@ bool FlashLight::OnTouchEvent(Pinetime::Applications::TouchEvents event) {
       brightnessLevel = BrightnessController::Levels::Medium;
       brightnessController.Set(brightnessLevel);
       SetIndicators();
+      settingsController.SetFlashLight(Controllers::Settings::FlashLight::Medium);
     } else if (brightnessLevel == BrightnessController::Levels::Medium) {
       brightnessLevel = BrightnessController::Levels::High;
       brightnessController.Set(brightnessLevel);
       SetIndicators();
+      settingsController.SetFlashLight(Controllers::Settings::FlashLight::High);
     }
     return true;
   }
 
+
   return false;
 }
+
+void FlashLight::brightnessSave() {
+  brightnessLevel = FlashLightLevel
+}
+
+/*void FlashLight::Set(FlashLight::Levels level) {
+  this->level = level;
+  switch (level) {
+    default:
+    case Levels::High:
+      
+      break;
+    case Levels::Medium:
+      
+      break;
+    case Levels::Low:
+      
+      break;
+    case Levels::Off:
+   
+      break;
+  }
+}*/

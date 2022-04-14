@@ -10,6 +10,7 @@ namespace Pinetime {
     public:
       enum class ClockType : uint8_t { H24, H12, Global };
       enum class Notification : uint8_t { ON, OFF };
+      enum class FlashLight : uint8_t { Low, Medium, High };
       enum class ChimesOption : uint8_t { None, Hours, HalfHours };
       enum class WakeUpMode : uint8_t {
         SingleTap = 0,
@@ -65,6 +66,16 @@ namespace Pinetime {
       };
       ChimesOption GetChimeOption() const {
         return settings.chimesOption;
+      };
+
+      void SetFlashLight(FlashLight Flashlight) {
+        if (Flashlight != settings.Flashlight) {
+          settingsChanged = true;
+        }
+        settings.Flashlight = Flashlight;
+      };
+      FlashLight GetFlashLight() const {
+        return settings.Flashlight;
       };
 
       void SetPTSColorTime(Colors colorTime) {
