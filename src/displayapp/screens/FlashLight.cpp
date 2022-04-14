@@ -60,7 +60,7 @@ FlashLight::FlashLight(Pinetime::Applications::DisplayApp* app,
 FlashLight::~FlashLight() {
   lv_obj_clean(lv_scr_act());
   lv_obj_set_style_local_bg_color(lv_scr_act(), LV_OBJ_PART_MAIN, LV_STATE_DEFAULT, LV_COLOR_BLACK);
-  FlashLight.brightnessSave();
+  settingsController.SaveSettings();
   brightnessController.Restore();
   systemTask.PushMessage(Pinetime::System::Messages::EnableSleeping);
 }
@@ -143,11 +143,11 @@ bool FlashLight::OnTouchEvent(Pinetime::Applications::TouchEvents event) {
   return false;
 }
 
-void FlashLight::brightnessSave() {
+/*void FlashLight::brightnessSave() {
   brightnessLevel = FlashLightLevel
 }
 
-/*void FlashLight::Set(FlashLight::Levels level) {
+void FlashLight::Set(FlashLight::Levels level) {
   this->level = level;
   switch (level) {
     default:
