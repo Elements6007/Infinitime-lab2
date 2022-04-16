@@ -3,6 +3,7 @@
 #include "displayapp/DisplayApp.h"
 #include "displayapp/screens/Symbols.h"
 #include "components/settings/Settings.h"
+#include "components/brightness/BrightnessController.h"
 
 using namespace Pinetime::Applications::Screens;
 
