@@ -145,6 +145,9 @@ bool FlashLight::OnTouchEvent(Pinetime::Applications::TouchEvents event) {
 }
 
 void FlashLight::brightnessSet() {
+
+  using namespace Pinetime::Controllers;
+
   if (settingsController.GetFlashLight() == Controllers::Settings::FlashLight::High) {
     brightnessLevel = BrightnessController::Levels::High;
     brightnessController.Set(brightnessLevel);
