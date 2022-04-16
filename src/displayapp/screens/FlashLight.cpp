@@ -101,6 +101,24 @@ void FlashLight::SetIndicators() {
   }
 }
 
+void FlashLight::brightnessSet() {
+
+  using namespace Pinetime::Controllers;
+
+  if (settingsController.GetFlashLight() == Controllers::Settings::FlashLight::High) {
+    brightnessLevel = BrightnessController::Levels::High;
+    brightnessController.Set(brightnessLevel);
+    SetIndicators();
+  } else if (settingsController.GetFlashLight() == Controllers::Settings::FlashLight::Medium) {
+    brightnessLevel = BrightnessController::Levels::Medium;
+    SetIndicators();    
+    brightnessController.Set(brightnessLevel);
+  } else {
+    brightnessLevel = BrightnessController::Levels::Low;
+    SetIndicators();
+  }
+}
+
 void FlashLight::OnClickEvent(lv_obj_t* obj, lv_event_t event) {
   if (obj == backgroundAction && event == LV_EVENT_CLICKED) {
     isOn = !isOn;
@@ -144,23 +162,7 @@ bool FlashLight::OnTouchEvent(Pinetime::Applications::TouchEvents event) {
   return false;
 }
 
-void FlashLight::brightnessSet() {
 
-  using namespace Pinetime::Controllers;
-
-  if (settingsController.GetFlashLight() == Controllers::Settings::FlashLight::High) {
-    brightnessLevel = BrightnessController::Levels::High;
-    brightnessController.Set(brightnessLevel);
-    SetIndicators();
-  } else if (settingsController.GetFlashLight() == Controllers::Settings::FlashLight::Medium) {
-    brightnessLevel == BrightnessController::Levels::Medium;
-    SetIndicators();    
-    brightnessController.Set(brightnessLevel);
-  } else {
-    brightnessLevel == BrightnessController::Levels::Low;
-    SetIndicators();
-  }
-}
 
 /*void FlashLight::brightnessSave() {
   brightnessLevel = FlashLightLevel
