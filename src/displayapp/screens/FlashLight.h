@@ -25,7 +25,7 @@ namespace Pinetime {
 
         void Set(Levels level);
         Levels Level() const;
-        void BrightnessSave();
+        void brightnessSet();
 
         void Backup();
         void Restore();

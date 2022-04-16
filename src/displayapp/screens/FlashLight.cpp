@@ -143,6 +143,21 @@ bool FlashLight::OnTouchEvent(Pinetime::Applications::TouchEvents event) {
   return false;
 }
 
+void FlashLight::brightnessSet() {
+  if (settingsController.SetFlashLight() == Controllers::Settings::FlashLight::High) {
+    brightnessLevel = BrightnessController::Levels::High;
+    brightnessController.Set(brightnessLevel);
+    SetIndicators();
+  } else if (settingsController.SetFlashLight() == Controllers::Settings::FlashLight::Medium) {
+    brightnessLevel = BrightnessController::Levels::Medium;
+    SetIndicators();    
+    brightnessController.Set(brightnessLevel);
+  } else {
+    brightnessLevel = BrightnessController::Levels::Low;
+    SetIndicators();
+  }
+}
+
 /*void FlashLight::brightnessSave() {
   brightnessLevel = FlashLightLevel
 }
