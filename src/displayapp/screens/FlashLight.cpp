@@ -146,7 +146,7 @@ bool FlashLight::OnTouchEvent(Pinetime::Applications::TouchEvents event) {
 
 void FlashLight::brightnessSet() {
   if (settingsController.GetFlashLight() == Controllers::Settings::FlashLight::High) {
-    brightnessLevel == BrightnessController::Levels::High;
+    brightnessLevel = BrightnessController::Levels::High;
     brightnessController.Set(brightnessLevel);
     SetIndicators();
   } else if (settingsController.GetFlashLight() == Controllers::Settings::FlashLight::Medium) {
