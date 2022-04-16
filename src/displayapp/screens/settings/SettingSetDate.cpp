@@ -4,6 +4,8 @@
 #include <nrf_log.h>
 #include "displayapp/DisplayApp.h"
 #include "displayapp/screens/Symbols.h"
+#include "displayapp/screens/ScreenList.h"
+#include "displayapp/screens/Label.h"
 
 using namespace Pinetime::Applications::Screens;
 
@@ -21,9 +23,28 @@ namespace {
   }
 }
 
-SettingSetDate::SettingSetDate(Pinetime::Applications::DisplayApp *app, Pinetime::Controllers::DateTime &dateTimeController) :
-  Screen(app),
-  dateTimeController {dateTimeController} {
+SettingSetDate::SettingSetDate(Pinetime::Applications::DisplayApp *app, Pinetime::Controllers::DateTime &dateTimeController) : Screen(app),
+dateTimeController {dateTimeController}, screens {app,
+             0,
+             {[this]() -> std::unique_ptr<Screen> {
+                return CreateScreen1();
+              },
+              [this]() -> std::unique_ptr<Screen> {
+                return CreateScreen2();
+              }},
+             Screens::ScreenListModes::UpDown} {
+} 
+
+bool SettingSetDate::OnTouchEvent(Pinetime::Applications::TouchEvents event) {
+  return screens.OnTouchEvent(event);
+}
+
+SettingSetDate::~SettingSetDate() {
+  lv_obj_clean(lv_scr_act());
+}
+
+std::unique_ptr<Screen> SettingSetDate::CreateScreen1() {
+
   lv_obj_t * title = lv_label_create(lv_scr_act(), nullptr);
   lv_label_set_text_static(title, "Set current date");
   lv_label_set_align(title, LV_LABEL_ALIGN_CENTER);
@@ -37,14 +58,14 @@ SettingSetDate::SettingSetDate(Pinetime::Applications::DisplayApp *app, Pinetime
   lv_obj_align(icon, title, LV_ALIGN_OUT_LEFT_MID, -10, 0);
 
   dayValue = static_cast<int>(dateTimeController.Day());
-  lblDay = lv_label_create(lv_scr_act(), nullptr);
+  lv_obj_t * lblDay = lv_label_create(lv_scr_act(), nullptr);
   lv_label_set_text_fmt(lblDay, "%d", dayValue);
   lv_label_set_align(lblDay, LV_LABEL_ALIGN_CENTER);
   lv_obj_align(lblDay, lv_scr_act(), LV_ALIGN_CENTER, POS_X_DAY, POS_Y_TEXT);
   lv_obj_set_auto_realign(lblDay, true);
-
-  monthValue = static_cast<int>(dateTimeController.Month());
-  lblMonth = lv_label_create(lv_scr_act(), nullptr);
+           
+  monthValue = static_cast<uint8_t>(dateTimeController.Month());
+  lv_obj_t * lblMonth = lv_label_create(lv_scr_act(), nullptr);
   UpdateMonthLabel();
   lv_label_set_align(lblMonth, LV_LABEL_ALIGN_CENTER);
   lv_obj_align(lblMonth, lv_scr_act(), LV_ALIGN_CENTER, POS_X_MONTH, POS_Y_TEXT);
@@ -107,13 +128,13 @@ SettingSetDate::SettingSetDate(Pinetime::Applications::DisplayApp *app, Pinetime
   lv_obj_align(btnSetTime, lv_scr_act(), LV_ALIGN_IN_BOTTOM_MID, 0, 0);
   lv_obj_set_style_local_value_str(btnSetTime, LV_BTN_PART_MAIN, LV_STATE_DEFAULT, "Set");
   lv_obj_set_event_cb(btnSetTime, event_handler);
+
+
+
+  return std::make_unique<Screens::Label>(0, 2, app, title);
 }
 
-SettingSetDate::~SettingSetDate() {
-  lv_obj_clean(lv_scr_act());
-}
-
-void SettingSetDate::HandleButtonPress(lv_obj_t *object, lv_event_t event) {
+ void SettingSetDate::HandleButtonPress(lv_obj_t *object, lv_event_t event) {
   if (event != LV_EVENT_CLICKED)
     return;
 
@@ -126,7 +147,7 @@ void SettingSetDate::HandleButtonPress(lv_obj_t *object, lv_event_t event) {
   } else if (object == btnDayMinus) {
     dayValue--;
     if (dayValue < 1)
-      dayValue = MaximumDayOfMonth();
+    dayValue = MaximumDayOfMonth();
     lv_label_set_text_fmt(lblDay, "%d", dayValue);
     lv_btn_set_state(btnSetTime, LV_BTN_STATE_RELEASED);
   } else if (object == btnMonthPlus) {
@@ -184,15 +205,26 @@ int SettingSetDate::MaximumDayOfMonth() const {
 }
 
 void SettingSetDate::CheckDay() {
-  int maxDay = MaximumDayOfMonth();
-  if (dayValue > maxDay) {
-    dayValue = maxDay;
-    lv_label_set_text_fmt(lblDay, "%d", dayValue);
-    lv_obj_align(lblDay, lv_scr_act(), LV_ALIGN_CENTER, POS_X_DAY, POS_Y_TEXT);
+ int maxDay = MaximumDayOfMonth();
+ if (dayValue > maxDay) {
+   dayValue = maxDay;
+   lv_label_set_text_fmt(lblDay, "%d", dayValue);
+   lv_obj_align(lblDay, lv_scr_act(), LV_ALIGN_CENTER, POS_X_DAY, POS_Y_TEXT);
   }
 }
 
 void SettingSetDate::UpdateMonthLabel() {
-  lv_label_set_text_static(
+ lv_label_set_text_static(
     lblMonth, Pinetime::Controllers::DateTime::MonthShortToStringLow(static_cast<Pinetime::Controllers::DateTime::Months>(monthValue)));
 }
+
+std::unique_ptr<Screen> SettingSetDate::CreateScreen2() {
+ 
+  lv_obj_t * onion = lv_label_create(lv_scr_act(), nullptr);
+  lv_label_set_text(onion, Symbols::phone);
+  lv_obj_align(onion, lv_scr_act(), LV_ALIGN_IN_TOP_RIGHT, 0, 0);
+
+
+  return std::make_unique<Screens::Label>(1, 2, app, onion);
+}
+

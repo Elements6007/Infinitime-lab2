@@ -35,6 +35,13 @@ namespace Pinetime {
           int MaximumDayOfMonth() const;
           void CheckDay();
           void UpdateMonthLabel();
+
+           ScreenList<5> screens;
+
+        static bool sortById(const TaskStatus_t& lhs, const TaskStatus_t& rhs);
+
+        std::unique_ptr<Screen> CreateScreen1();
+        std::unique_ptr<Screen> CreateScreen2();
       };
     }
   }
