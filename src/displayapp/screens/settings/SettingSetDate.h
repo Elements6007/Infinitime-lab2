@@ -4,6 +4,7 @@
 #include <lvgl/lvgl.h>
 #include "components/datetime/DateTimeController.h"
 #include "displayapp/screens/Screen.h"
+#include "displayapp/screens/Label.h"
 
 namespace Pinetime {
   namespace Applications {
@@ -36,7 +37,7 @@ namespace Pinetime {
           void CheckDay();
           void UpdateMonthLabel();
 
-           ScreenList<5> screens;
+           ScreenList<2> screens;
 
         static bool sortById(const TaskStatus_t& lhs, const TaskStatus_t& rhs);
 
