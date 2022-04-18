@@ -16,6 +16,8 @@ namespace Pinetime {
           ~SettingSetDate() override;
 
           void HandleButtonPress(lv_obj_t *object, lv_event_t event);
+
+          bool OnTouchEvent(TouchEvents event) override;
          
         private:
           Controllers::DateTime& dateTimeController;
