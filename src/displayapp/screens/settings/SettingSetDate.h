@@ -5,6 +5,7 @@
 #include "components/datetime/DateTimeController.h"
 #include "displayapp/screens/Screen.h"
 #include "displayapp/screens/Label.h"
+#include "displayapp/screens/ScreenList.h"
 
 namespace Pinetime {
   namespace Applications {
@@ -37,9 +38,7 @@ namespace Pinetime {
           void CheckDay();
           void UpdateMonthLabel();
 
-           ScreenList<2> screens;
-
-        static bool sortById(const TaskStatus_t& lhs, const TaskStatus_t& rhs);
+        ScreenList<2> screens;
 
         std::unique_ptr<Screen> CreateScreen1();
         std::unique_ptr<Screen> CreateScreen2();
