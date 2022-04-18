@@ -178,7 +178,7 @@ std::unique_ptr<Screen> SettingSetDate::CreateScreen1() {
   } else if (object == btnSetTime) {
     NRF_LOG_INFO("Setting date (manually) to %04d-%02d-%02d", yearValue, monthValue, dayValue);
     dateTimeController.SetTime(static_cast<uint16_t>(yearValue),
-                               static_cast<uint8_t>(monthValue),
+                               static_cast<uint8_t>(monthVal),
                                static_cast<uint8_t>(dayValue),
                                0,
                                dateTimeController.Hours(),
@@ -216,7 +216,7 @@ void SettingSetDate::CheckDay() {
 
 void SettingSetDate::UpdateMonthLabel() {
  lv_label_set_text_fmt(
-    lblMonth, Pinetime::Controllers::DateTime::MonthShortToString(static_cast<Pinetime::Controllers::DateTime::Months>(monthValue)));
+    lblMonth, Pinetime::Controllers::DateTime::MonthShortToString(static_cast<Pinetime::Controllers::DateTime::Months>(monthValue)), MonthVal);
 }
 
 std::unique_ptr<Screen> SettingSetDate::CreateScreen2() {
