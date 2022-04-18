@@ -216,7 +216,7 @@ void SettingSetDate::CheckDay() {
 
 void SettingSetDate::UpdateMonthLabel() {
  lv_label_set_text_static(
-    lblMonth, Pinetime::Controllers::DateTime::MonthShortToStringLow(static_cast<Pinetime::Controllers::DateTime::Months>(monthValue)));
+    lblMonth, Pinetime::Controllers::DateTime::MonthShortToStrings(static_cast<Pinetime::Controllers::DateTime::Months>(monthValue)));
 }
 
 std::unique_ptr<Screen> SettingSetDate::CreateScreen2() {
