@@ -25,6 +25,7 @@ namespace Pinetime {
           int dayValue;
           int monthValue;
           int yearValue;
+          int monthVal;
           lv_obj_t * lblDay;
           lv_obj_t * lblMonth;
           lv_obj_t * lblYear;
