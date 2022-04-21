@@ -156,7 +156,7 @@ std::unique_ptr<Screen> SettingSetDate::CreateScreen1() {
     if (monthValue > 12)
       monthValue = 1;
     UpdateMonthLabel();
-    lv_label_set_text_fmt( lblMonth, "%d", monthValue /*dateTimeController.MonthShortToString()*/);
+    /*lv_label_set_text_fmt( lblMonth, "%d", monthValue /*dateTimeController.MonthShortToString());*/
     lv_btn_set_state(btnSetTime, LV_BTN_STATE_RELEASED);
     CheckDay();
   } else if (object == btnMonthMinus) {
@@ -164,7 +164,7 @@ std::unique_ptr<Screen> SettingSetDate::CreateScreen1() {
     if (monthValue < 1)
       monthValue = 12;
     UpdateMonthLabel();
-    lv_label_set_text_fmt( lblMonth, "%d", monthValue /*dateTimeController.MonthShortToString()*/);
+    /*lv_label_set_text_fmt( lblMonth, "%d", monthValue /*dateTimeController.MonthShortToString());*/
     lv_btn_set_state(btnSetTime, LV_BTN_STATE_RELEASED);
     CheckDay();
   } else if (object == btnYearPlus) {
@@ -191,7 +191,7 @@ std::unique_ptr<Screen> SettingSetDate::CreateScreen1() {
   }
 }
 
-int SettingSetDate::MaximumDayOfMonth() const {
+/*int SettingSetDate::MaximumDayOfMonth() const {
   switch (monthValue) {
     case 2:
       if ((((yearValue % 4) == 0) && ((yearValue % 100) != 0)) || ((yearValue % 400) == 0))
@@ -205,7 +205,7 @@ int SettingSetDate::MaximumDayOfMonth() const {
     default:
       return 31;
   }
-}
+}*/
 
 void SettingSetDate::CheckDay() {
  int maxDay = MaximumDayOfMonth();
