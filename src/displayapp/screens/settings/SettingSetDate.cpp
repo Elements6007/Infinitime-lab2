@@ -191,7 +191,7 @@ std::unique_ptr<Screen> SettingSetDate::CreateScreen1() {
   }
 }
 
-/*int SettingSetDate::MaximumDayOfMonth() const {
+int SettingSetDate::MaximumDayOfMonth() const {
   switch (monthValue) {
     case 2:
       if ((((yearValue % 4) == 0) && ((yearValue % 100) != 0)) || ((yearValue % 400) == 0))
@@ -205,7 +205,7 @@ std::unique_ptr<Screen> SettingSetDate::CreateScreen1() {
     default:
       return 31;
   }
-}*/
+}
 
 void SettingSetDate::CheckDay() {
  int maxDay = MaximumDayOfMonth();
@@ -215,11 +215,9 @@ void SettingSetDate::CheckDay() {
    lv_obj_align(lblDay, lv_scr_act(), LV_ALIGN_CENTER, POS_X_DAY, POS_Y_TEXT);
   }
 }
-
 void SettingSetDate::UpdateMonthLabel() {
- lv_label_set_text_fmt(
+  lv_label_set_text_static(
     lblMonth, Pinetime::Controllers::DateTime::MonthShortToStringLow(static_cast<Pinetime::Controllers::DateTime::Months>(monthValue)));
-   /* lv_obj_align(lblMonth, lv_scr_act(), LV_ALIGN_CENTER, POS_X_DAY, POS_Y_TEXT);*/
 }
 
 std::unique_ptr<Screen> SettingSetDate::CreateScreen2() {
