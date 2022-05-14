@@ -4,8 +4,6 @@
 #include <lvgl/lvgl.h>
 #include "components/datetime/DateTimeController.h"
 #include "displayapp/screens/Screen.h"
-#include "displayapp/screens/Label.h"
-#include "displayapp/screens/ScreenList.h"
 
 namespace Pinetime {
   namespace Applications {
@@ -16,8 +14,6 @@ namespace Pinetime {
           ~SettingSetDate() override;
 
           void HandleButtonPress(lv_obj_t *object, lv_event_t event);
-
-          bool OnTouchEvent(TouchEvents event) override;
          
         private:
           Controllers::DateTime& dateTimeController;
@@ -25,7 +21,6 @@ namespace Pinetime {
           int dayValue;
           int monthValue;
           int yearValue;
-          int monthVal;
           lv_obj_t * lblDay;
           lv_obj_t * lblMonth;
           lv_obj_t * lblYear;
@@ -40,11 +35,6 @@ namespace Pinetime {
           int MaximumDayOfMonth() const;
           void CheckDay();
           void UpdateMonthLabel();
-
-        ScreenList<2> screens;
-
-        std::unique_ptr<Screen> CreateScreen1();
-        std::unique_ptr<Screen> CreateScreen2();
       };
     }
   }
