@@ -64,16 +64,11 @@ std::unique_ptr<Screen> ApplicationList::CreateScreen2() {
   return std::make_unique<Screens::Tile>(1, 2, app, settingsController, batteryController, dateTimeController, applications);
 }
 
-/*std::unique_ptr<Screen> ApplicationList::CreateScreen3() {
+std::unique_ptr<Screen> ApplicationList::CreateScreen3() {
   std::array<Screens::Tile::Applications, 6> applications {
-          {{"A", Apps::Meter},
-           {"B", Apps::Navigation},
-           {"C", Apps::Clock},
-           {"D", Apps::Music},
-           {"E", Apps::SysInfo},
-           {"F", Apps::Brightness}
+          {{"A", Apps::pagetest}
           }
   };
 
   return std::make_unique<Screens::Tile>(2, 3, app, settingsController, batteryController, dateTimeController, applications);
-}*/
+}
