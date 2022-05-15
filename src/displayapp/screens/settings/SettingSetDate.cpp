@@ -194,6 +194,6 @@ void SettingSetDate::CheckDay() {
 
 
 void SettingSetDate::UpdateMonthLabel() {
-  lv_label_set_text_static(
+  lv_label_set_text_fmt(
     lblMonth, static_cast<uint8_t>(dateTimeController.Month()));
 }
