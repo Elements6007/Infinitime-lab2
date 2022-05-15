@@ -173,7 +173,7 @@ int SettingSetDate::MaximumDayOfMonth() const {
       if ((((yearValue % 4) == 0) && ((yearValue % 100) != 0)) || ((yearValue % 400) == 0))
         return 29;
       return 28;
-    case 4:
+    case 4: 
     case 6:
     case 9:
     case 11:
