@@ -116,7 +116,7 @@ const char* DateTime::DayOfWeekShortToString() const {
   return DaysStringShort[static_cast<uint8_t>(dayOfWeek)];
 }
 
-const char* DateTime::MonthShortToStringLow() const {
+const char* DateTime::MonthShortToStringLow(Months month) {
   return MonthsStringLow[static_cast<uint8_t>(month)];
 }
 
@@ -128,9 +128,7 @@ using ClockType = Pinetime::Controllers::Settings::ClockType;
 std::string DateTime::FormattedTime() {
   // Return time as a string in 12- or 24-hour format
   char buff[9];
-
-//if (settingsController.GetClockType() == ClockType::Global){
-    if (settingsController.GetClockType() == ClockType::H12) {
+  if (settingsController.GetClockType() == ClockType::H12) {
       uint8_t hour12;
       const char* amPmStr;
       if (hour < 12) {
@@ -146,5 +144,3 @@ std::string DateTime::FormattedTime() {
   }
   return std::string(buff);
 }
-//return std::string(buff);
-//}
