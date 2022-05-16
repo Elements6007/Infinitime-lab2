@@ -195,5 +195,5 @@ void SettingSetDate::CheckDay() {
 
 void SettingSetDate::UpdateMonthLabel() {
   lv_label_set_text_fmt(
-    lblMonth, static_cast<uint8_t>(dateTimeController.Month()));
+    lblMonth, Pinetime::Controllers::DateTime::MonthShortToStringLow(static_cast<Pinetime::Controllers::DateTime::Months>(monthValue)));
 }
