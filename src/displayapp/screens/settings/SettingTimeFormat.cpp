@@ -29,7 +29,7 @@ SettingTimeFormat::SettingTimeFormat(Pinetime::Applications::DisplayApp* app, Pi
              Screens::ScreenListModes::UpDown} {
 } 
 
-  std::unique_ptr<Screen> SystemInfo::CreateScreen1() {
+  std::unique_ptr<Screen> SettingTimeFormat::CreateScreen1() {
   lv_obj_t* container1 = lv_cont_create(lv_scr_act(), nullptr);
 
   lv_obj_set_style_local_bg_opa(container1, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, LV_OPA_TRANSP);
@@ -53,7 +53,7 @@ SettingTimeFormat::SettingTimeFormat(Pinetime::Applications::DisplayApp* app, Pi
   lv_label_set_align(icon, LV_LABEL_ALIGN_CENTER);
   lv_obj_align(icon, title, LV_ALIGN_OUT_LEFT_MID, -10, 0);
   return std::make_unique<Screens::Label>(0, 1, app, container1);
-}
+} {
   
 
   for (unsigned int i = 0; i < options.size(); i++) {
