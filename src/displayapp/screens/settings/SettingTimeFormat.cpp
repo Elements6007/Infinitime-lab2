@@ -1,6 +1,7 @@
 #include "displayapp/screens/settings/SettingTimeFormat.h"
 #include <lvgl/lvgl.h>
 #include "displayapp/DisplayApp.h"
+#include "displayapp/screens/Label.h"
 #include "displayapp/screens/Styles.h"
 #include "displayapp/screens/Screen.h"
 #include "displayapp/screens/Symbols.h"
@@ -17,8 +18,18 @@ namespace {
 constexpr std::array<const char*, 3> SettingTimeFormat::options;
 
 SettingTimeFormat::SettingTimeFormat(Pinetime::Applications::DisplayApp* app, Pinetime::Controllers::Settings& settingsController)
-  : Screen(app), settingsController {settingsController} {
+  : Screen(app), settingsController {settingsController}, screens {app,
+             0,
+             {[this]() -> std::unique_ptr<Screen> {
+                return CreateScreen1();
+              },
+              [this]() -> std::unique_ptr<Screen> {
+                return CreateScreen2();
+              }},
+             Screens::ScreenListModes::UpDown} {
+} {
 
+  std::unique_ptr<Screen> SystemInfo::CreateScreen1() {
   lv_obj_t* container1 = lv_cont_create(lv_scr_act(), nullptr);
 
   lv_obj_set_style_local_bg_opa(container1, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, LV_OPA_TRANSP);
@@ -41,6 +52,9 @@ SettingTimeFormat::SettingTimeFormat(Pinetime::Applications::DisplayApp* app, Pi
   lv_label_set_text_static(icon, Symbols::clock);
   lv_label_set_align(icon, LV_LABEL_ALIGN_CENTER);
   lv_obj_align(icon, title, LV_ALIGN_OUT_LEFT_MID, -10, 0);
+  return std::make_unique<Screens::Label>(0, 1, app, container1);
+}
+  
 
   for (unsigned int i = 0; i < options.size(); i++) {
     cbOption[i] = lv_checkbox_create(container1, nullptr);

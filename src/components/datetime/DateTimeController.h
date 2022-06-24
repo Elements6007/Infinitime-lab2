@@ -94,6 +94,8 @@ namespace Pinetime {
       bool isHalfHourAlreadyNotified = true;
       System::SystemTask* systemTask = nullptr;
       Controllers::Settings& settingsController;
+
+      
     };
   }
 }
