@@ -27,7 +27,7 @@ SettingTimeFormat::SettingTimeFormat(Pinetime::Applications::DisplayApp* app, Pi
                 return CreateScreen2();
               }},
              Screens::ScreenListModes::UpDown} {
-} {
+} 
 
   std::unique_ptr<Screen> SystemInfo::CreateScreen1() {
   lv_obj_t* container1 = lv_cont_create(lv_scr_act(), nullptr);
