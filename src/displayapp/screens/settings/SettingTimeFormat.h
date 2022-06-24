@@ -1,35 +1,39 @@
 #pragma once
 
-#include <array>
 #include <cstdint>
 #include <lvgl/lvgl.h>
-
+#include "components/datetime/DateTimeController.h"
 #include "components/settings/Settings.h"
 #include "displayapp/screens/Screen.h"
-#include "displayapp/screens/ScreenList.h"
 
 namespace Pinetime {
-
   namespace Applications {
     namespace Screens {
-
-      class SettingTimeFormat : public Screen {
+      class SettingSetTime : public Screen {
       public:
-        SettingTimeFormat(DisplayApp* app, Pinetime::Controllers::Settings& settingsController);
-        ~SettingTimeFormat() override;
-        bool OnTouchEvent(TouchEvents event) override;
+        SettingSetTime(DisplayApp* app,
+                       Pinetime::Controllers::DateTime& dateTimeController,
+                       Pinetime::Controllers::Settings& settingsController);
+        ~SettingSetTime() override;
 
-        void UpdateSelected(lv_obj_t* object, lv_event_t event);
+        void HandleButtonPress(lv_obj_t* object, lv_event_t event);
 
       private:
-        static constexpr std::array<const char*, 3> options = {" 12-hour", " 24-hour", " Global"};
+        Controllers::DateTime& dateTimeController;
         Controllers::Settings& settingsController;
-        lv_obj_t* cbOption[options.size()];
 
-        ScreenList<2> screens;
+        void SetHourLabels();
 
-        std::unique_ptr<Screen> CreateScreen1();
-        std::unique_ptr<Screen> CreateScreen2();
+        int hoursValue;
+        int minutesValue;
+        lv_obj_t* lblHours;
+        lv_obj_t* lblMinutes;
+        lv_obj_t* lblampm;
+        lv_obj_t* btnHoursPlus;
+        lv_obj_t* btnHoursMinus;
+        lv_obj_t* btnMinutesPlus;
+        lv_obj_t* btnMinutesMinus;
+        lv_obj_t* btnSetTime;
       };
     }
   }
