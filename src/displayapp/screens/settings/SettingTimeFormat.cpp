@@ -57,6 +57,17 @@ SettingTimeFormat::SettingTimeFormat(Pinetime::Applications::DisplayApp* app, Pi
   }
 }
 
+void SettingTimeFormat::MenuInfo() {
+  btnStatus = lv_btn_create(lv_scr_act(), nullptr);
+  btnStatus->user_data = this;
+  lv_obj_set_event_cb(btnStatus, btnEventHandler);
+  lv_obj_set_height(btnStatus, 200);
+  lv_obj_set_width(btnStatus, 150);
+  lv_obj_align(btnStatus, lv_scr_act(), LV_ALIGN_CENTER, 0, 0);
+  txtMessage = lv_label_create(btnStatus, nullptr);
+  lv_obj_set_style_local_bg_color(btnStatus, LV_BTN_PART_MAIN, LV_STATE_DEFAULT, LV_COLOR_NAVY);
+}
+
 SettingTimeFormat::~SettingTimeFormat() {
   lv_obj_clean(lv_scr_act());
   settingsController.SaveSettings();

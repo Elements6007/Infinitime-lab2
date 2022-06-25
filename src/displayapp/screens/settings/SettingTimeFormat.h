@@ -23,6 +23,7 @@ namespace Pinetime {
         static constexpr std::array<const char*, 2> options = {" 12-hour", " 24-hour"};
         Controllers::Settings& settingsController;
         lv_obj_t* cbOption[options.size()];
+        void MenuInfo();
       };
     }
   }
