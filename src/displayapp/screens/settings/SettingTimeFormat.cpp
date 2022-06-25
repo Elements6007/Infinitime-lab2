@@ -14,6 +14,11 @@ namespace {
   }
 }
 
+static void btnEventHandler(lv_obj_t* obj, lv_event_t event) {
+  auto* screen = static_cast<Alarm*>(obj->user_data);
+  screen->OnButtonEvent(obj, event);
+}
+
 constexpr std::array<const char*, 2> SettingTimeFormat::options;
 
 SettingTimeFormat::SettingTimeFormat(Pinetime::Applications::DisplayApp* app, Pinetime::Controllers::Settings& settingsController)
@@ -64,8 +69,6 @@ void SettingTimeFormat::MenuInfo() {
   lv_obj_set_height(btnStatus, 200);
   lv_obj_set_width(btnStatus, 150);
   lv_obj_align(btnStatus, lv_scr_act(), LV_ALIGN_CENTER, 0, 0);
-  txtStatus = lv_label_create(btnStatus, nullptr);
-  lv_obj_set_style_local_bg_color(btnStatus, LV_BTN_PART_MAIN, LV_STATE_DEFAULT, LV_COLOR_NAVY);
 }
 
 SettingTimeFormat::~SettingTimeFormat() {
