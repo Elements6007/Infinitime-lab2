@@ -64,7 +64,7 @@ void SettingTimeFormat::MenuInfo() {
   lv_obj_set_height(btnStatus, 200);
   lv_obj_set_width(btnStatus, 150);
   lv_obj_align(btnStatus, lv_scr_act(), LV_ALIGN_CENTER, 0, 0);
-  txtMessage = lv_label_create(btnStatus, nullptr);
+  txtStatus = lv_label_create(btnStatus, nullptr);
   lv_obj_set_style_local_bg_color(btnStatus, LV_BTN_PART_MAIN, LV_STATE_DEFAULT, LV_COLOR_NAVY);
 }
 
