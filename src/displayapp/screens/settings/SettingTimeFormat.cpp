@@ -14,11 +14,6 @@ namespace {
   }
 }
 
-static void btnEventHandler(lv_obj_t* obj, lv_event_t event) {
-  auto* screen = static_cast<SettingTimeFormat*>(obj->user_data);
-  screen->OnButtonEvent(obj, event);
-}
-
 constexpr std::array<const char*, 2> SettingTimeFormat::options;
 
 SettingTimeFormat::SettingTimeFormat(Pinetime::Applications::DisplayApp* app, Pinetime::Controllers::Settings& settingsController)
@@ -65,7 +60,7 @@ SettingTimeFormat::SettingTimeFormat(Pinetime::Applications::DisplayApp* app, Pi
 void SettingTimeFormat::MenuInfo() {
   btnStatus = lv_btn_create(lv_scr_act(), nullptr);
   btnStatus->user_data = this;
-  lv_obj_set_event_cb(btnStatus, btnEventHandler);
+  lv_obj_set_event_cb(btnStatus, event_handler);
   lv_obj_set_height(btnStatus, 200);
   lv_obj_set_width(btnStatus, 150);
   lv_obj_align(btnStatus, lv_scr_act(), LV_ALIGN_CENTER, 0, 0);
@@ -94,4 +89,5 @@ void SettingTimeFormat::UpdateSelected(lv_obj_t* object, lv_event_t event) {
       }
     }
   }
+
 }
