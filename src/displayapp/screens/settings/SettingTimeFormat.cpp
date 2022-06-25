@@ -15,7 +15,7 @@ namespace {
 }
 
 static void btnEventHandler(lv_obj_t* obj, lv_event_t event) {
-  auto* screen = static_cast<Alarm*>(obj->user_data);
+  auto* screen = static_cast<SettingTimeFormat*>(obj->user_data);
   screen->OnButtonEvent(obj, event);
 }
 
