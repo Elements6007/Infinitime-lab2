@@ -74,6 +74,12 @@ void SettingTimeFormat::MenuInfo() {
   lv_obj_align(btnStatus, lv_scr_act(), LV_ALIGN_CENTER, 0, 0);
 }
 
+void Alarm::HideInfo() {
+  lv_obj_del(btnStatus);
+ /* txtMessage = nullptr;*/
+  btnStatus = nullptr;
+}
+
 SettingTimeFormat::~SettingTimeFormat() {
   lv_obj_clean(lv_scr_act());
   settingsController.SaveSettings();
