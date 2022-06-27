@@ -25,6 +25,7 @@ namespace Pinetime {
         lv_obj_t* cbOption[options.size()];
         lv_obj_t* btnInfo;
         lv_obj_t* txtInfo;
+        lv_obj_t* txtInfo;
         void MenuInfo();
         void HideInfo();
         lv_obj_t* txtStatus = nullptr;
