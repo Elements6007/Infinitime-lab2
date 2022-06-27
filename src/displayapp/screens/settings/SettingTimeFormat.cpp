@@ -42,6 +42,14 @@ SettingTimeFormat::SettingTimeFormat(Pinetime::Applications::DisplayApp* app, Pi
   lv_label_set_align(icon, LV_LABEL_ALIGN_CENTER);
   lv_obj_align(icon, title, LV_ALIGN_OUT_LEFT_MID, -10, 0);
 
+  btnInfo = lv_btn_create(lv_scr_act(), nullptr);
+  btnInfo->user_data = this;
+  lv_obj_set_event_cb(btnInfo, event_handler);
+  lv_obj_set_size(btnInfo, 50, 40);
+  lv_obj_align(btnInfo, lv_scr_act(), LV_ALIGN_CENTER, 0, 85);
+  txtInfo = lv_label_create(btnInfo, nullptr);
+  lv_label_set_text_static(txtInfo, "Menu Time");
+
   for (unsigned int i = 0; i < options.size(); i++) {
     cbOption[i] = lv_checkbox_create(container1, nullptr);
     lv_checkbox_set_text(cbOption[i], options[i]);
@@ -89,5 +97,14 @@ void SettingTimeFormat::UpdateSelected(lv_obj_t* object, lv_event_t event) {
       }
     }
   }
+  if (event == LV_EVENT_CLICKED) {
+   if (obj == btnInfo) {
+   MenuInfo();
+   return;
+   }
+   if (event == LV_EVENT_CLICKED) {
+   if (obj == btnStatus)
+   }
 
+  }
 }
