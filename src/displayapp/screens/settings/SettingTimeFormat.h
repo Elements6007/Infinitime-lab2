@@ -24,6 +24,7 @@ namespace Pinetime {
         Controllers::Settings& settingsController;
         lv_obj_t* cbOption[options.size()];
         lv_obj_t* btnInfo;
+        lv_obj_t* txtInfo;
         void MenuInfo();
         void HideInfo();
         lv_obj_t* txtStatus = nullptr;
