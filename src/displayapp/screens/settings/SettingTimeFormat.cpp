@@ -98,12 +98,12 @@ void SettingTimeFormat::UpdateSelected(lv_obj_t* object, lv_event_t event) {
     }
   }
   if (event == LV_EVENT_CLICKED) {
-   if (obj == btnInfo) {
+   if (object == btnInfo) {
    MenuInfo();
    return;
    }
    if (event == LV_EVENT_CLICKED) {
-   if (obj == btnStatus)
+   if (object == btnStatus)
    }
 
   }
