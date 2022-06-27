@@ -48,7 +48,7 @@ SettingTimeFormat::SettingTimeFormat(Pinetime::Applications::DisplayApp* app, Pi
   lv_obj_set_size(btnInfo, 50, 40);
   lv_obj_align(btnInfo, lv_scr_act(), LV_ALIGN_CENTER, 0, -85);
   txtInfo = lv_label_create(btnInfo, nullptr);
-  lv_label_set_text_static(txtInfo, "Menu Time");
+  lv_label_set_text_static(txtInfo, "i");
 
   for (unsigned int i = 0; i < options.size(); i++) {
     cbOption[i] = lv_checkbox_create(container1, nullptr);
